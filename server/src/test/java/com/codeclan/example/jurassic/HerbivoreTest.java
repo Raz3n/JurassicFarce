@@ -32,4 +32,9 @@ public class HerbivoreTest {
     public void canGetStomach() {
         assertEquals(4, herbivore.getStomach());
     }
+
+    @Test
+    public void canGetSpecies() {
+        assertEquals("Diplodocus", herbivore.getSpecies());
+    }
 }
