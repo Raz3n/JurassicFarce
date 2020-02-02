@@ -24,7 +24,7 @@ public class DataLoader implements ApplicationRunner {
 
     }
 
-    public void run(ApplicationArguments ags){
+    public void run(ApplicationArguments args){
 
         Paddock catrinCanyon = new Paddock("Catrin Canyon");
         paddockRepository.save(catrinCanyon);

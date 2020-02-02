@@ -5,7 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dinosaurs")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name="dinosaurs")
+@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
+//@Entity
+//@Table(name="dinosaurs")
 public abstract class Dinosaur {
 
     @Column(name = "stomach")

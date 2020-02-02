@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface DinosaurRepositoryCustom {
 
-    List<Dinosaur> allDinosaurs();
-
-    List<Dinosaur> getDinosaurByPaddock(Paddock paddock);
-
-    List<Dinosaur> getDinosaurByName(String name);
+//    List<Dinosaur> allDinosaurs();
+//
+//    List<Dinosaur> getDinosaurByPaddock(Paddock paddock);
+//
+//    List<Dinosaur> getDinosaurByName(String name);
 
 }

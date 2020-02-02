@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface PaddockRepositoryCustom {
 
-    List<Paddock> allPaddocks();
+//    List<Paddock> allPaddocks();
 
-    List<Paddock> getPaddockByCapacity(int capacity);
+    List<Paddock> findPaddockByCapacity(int capacity);
 
-    List<Paddock> getPaddockByName(String name);
+    List<Paddock> findPaddockByName(String name);
 }
