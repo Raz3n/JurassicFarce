@@ -15,6 +15,7 @@ const NavBar = () => (
         <Link to="/paddocks">Paddocks</Link>
       </li>
     </ul>
+    <button>Kill All</button>
   </div>
 );
 
