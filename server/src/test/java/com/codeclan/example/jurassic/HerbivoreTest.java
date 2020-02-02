@@ -43,5 +43,13 @@ public class HerbivoreTest {
         assertEquals('M', herbivore.getSex());
     }
 
+    @Test
+    public void canGetImage() {
+        assertEquals("image1", herbivore.getImage());
+    }
 
+    @Test
+    public void canGetPaddock() {
+        assertEquals("Morgaine Meadows", herbivore.getPaddock().getName());
+    }
 }
