@@ -22,4 +22,14 @@ public class HerbivoreTest {
     public void canGetName() {
         assertEquals("Nelson", herbivore.getName());
     }
+
+    @Test
+    public void canGetStomachCapacity() {
+        assertEquals(5, herbivore.getStomachCapacity());
+    }
+
+    @Test
+    public void canGetStomach() {
+        assertEquals(4, herbivore.getStomach());
+    }
 }
