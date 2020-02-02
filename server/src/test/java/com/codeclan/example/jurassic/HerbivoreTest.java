@@ -37,4 +37,11 @@ public class HerbivoreTest {
     public void canGetSpecies() {
         assertEquals("Diplodocus", herbivore.getSpecies());
     }
+
+    @Test
+    public void canGetSex() {
+        assertEquals('M', herbivore.getSex());
+    }
+
+
 }

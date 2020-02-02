@@ -40,7 +40,7 @@ public abstract class Dinosaur {
         this.stomach = 4;
         this.species = species;
         this.name = name;
-        this.sex = 'F';
+        this.sex = sex;
         this.image = image;
         this.paddock = paddock;
     }
