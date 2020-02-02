@@ -16,11 +16,11 @@ public class DinosaurController {
 
     @Autowired
     DinosaurRepository dinosaurRepository;
-
-    @GetMapping(value ="/paddock/{id}")
-    public List<Dinosaur> findDinosaurByPaddockId(@PathVariable Long id){
-        return dinosaurRepository.findDinosaurByPaddockId(id);
-    }
+//
+//    @GetMapping(value ="/paddock/{id}")
+//    public List<Dinosaur> findDinosaurByPaddockId(@PathVariable Long id){
+//        return dinosaurRepository.findDinosaurByPaddockId(id);
+//    }
 
 
 
