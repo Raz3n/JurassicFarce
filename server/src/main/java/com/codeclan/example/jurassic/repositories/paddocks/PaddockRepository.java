@@ -1,4 +1,4 @@
-package com.codeclan.example.jurassic.repositories;
+package com.codeclan.example.jurassic.repositories.paddocks;
 
 import com.codeclan.example.jurassic.models.Paddock;
 import org.springframework.data.jpa.repository.JpaRepository;
