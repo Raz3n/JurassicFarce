@@ -25,5 +25,8 @@ public class PaddockTest {
         assertEquals(4, paddock.getCapacity());
     }
 
-
+    @Test
+    public void canGetDinosaurs() {
+        assertEquals(0, paddock.getDinosaurs().size());
+    }
 }
