@@ -1,6 +1,10 @@
 package com.codeclan.example.jurassic.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="species")
@@ -19,6 +23,10 @@ public class Species {
     @Column(name = "image")
     private String image;
 
+    @JsonIgnoreProperties("species")
+    @OneToMany(mappedBy = "species", fetch = FetchType.LAZY)
+    private List<Dinosaur> dinosaurs;
+
     public Species() {
 
     }
@@ -27,6 +35,7 @@ public class Species {
         this.type = type;
         this.diet = diet;
         this.image = image;
+        this.dinosaurs = new ArrayList<>();
     }
 
     public String getType() {
@@ -60,5 +69,15 @@ public class Species {
     public void setId(Long id) {
         Id = id;
     }
+
+    public List<Dinosaur> getDinosaurs() {
+        return dinosaurs;
+    }
+
+    public void setDinosaurs(List<Dinosaur> dinosaurs) {
+        this.dinosaurs = dinosaurs;
+    }
 }
+
+
 
