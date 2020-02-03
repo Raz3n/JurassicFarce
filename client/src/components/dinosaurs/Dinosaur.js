@@ -11,6 +11,7 @@ const Dinosaur = ({dinosaur, paddocks}) => {
     return (
         <Fragment>
                 <h4>{dinosaur.name}</h4>
+                <img src={dinosaur.species.image} />
                 <p>{dinosaur.paddock.name}</p>
                 <p>{dinosaur.species.type}</p>
                 <p>{dinosaur.species.diet}</p>
