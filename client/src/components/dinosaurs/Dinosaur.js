@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import EditDinosaur from './EditDinosaur';
 
 
-const Dinosaur = ({dinosaur}) => {
+const Dinosaur = ({dinosaur, paddocks}) => {
 
     if(!dinosaur) {
         return "Loading"
@@ -14,7 +14,7 @@ const Dinosaur = ({dinosaur}) => {
                 <p>{dinosaur.paddock.name}</p>
                 <p>{dinosaur.species.type}</p>
                 <p>{dinosaur.species.diet}</p>
-                <EditDinosaur />
+                <EditDinosaur paddocks={paddocks}/>
         </Fragment>
     )
 }

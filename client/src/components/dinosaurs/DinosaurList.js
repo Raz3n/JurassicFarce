@@ -11,7 +11,7 @@ const DinosaurList = (props) => {
     const dinosaurs = props.dinosaurs.map((dinosaur, index) => {
         return (
             <li key={index} className='component-item'>
-                    <Dinosaur dinosaur={dinosaur} />
+                    <Dinosaur dinosaur={dinosaur} paddocks={props.paddocks} />
             </li>
         )
     })
