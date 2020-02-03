@@ -1,18 +1,26 @@
 import React from 'react';
 
-const EditDinosaur = ({ paddocks =[]  }) => {
+const EditDinosaur = ({ paddocks, dinosaur }) => {
 
-    const paddockList = paddocks.map((paddock, index) => {
-        return (
-            <option key={index}>{paddock.name}</option>
-        )
+    const newPaddocks = paddocks.filter(paddock => {
+        return paddock.name !== dinosaur.paddock.name
     })
+    const paddockList = newPaddocks.map((paddock) => {
+        return (
+            <>
+                <option key={paddock.id}>{paddock.name}</option>
+            </>
+        )
+    }
+    )
+
     return (
-        
+
         <select>
+            <option selected={dinosaur.paddock.name}>{dinosaur.paddock.name}</option>
             {paddockList}
         </select>
-       
+
     )
 }
 
