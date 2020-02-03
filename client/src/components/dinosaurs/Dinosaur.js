@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import EditDinosaur from './EditDinosaur';
+
 
 const Dinosaur = ({dinosaur}) => {
 
@@ -7,13 +8,13 @@ const Dinosaur = ({dinosaur}) => {
         return "Loading"
     }
 
-    const url = `/dinosaurs/${dinosaur.id}`
-
     return (
         <Fragment>
-            <Link to={url}>
-                {dinosaur.name}
-            </Link>
+                <h4>{dinosaur.name}</h4>
+                <p>{dinosaur.paddock.name}</p>
+                <p>{dinosaur.species.type}</p>
+                <p>{dinosaur.species.diet}</p>
+                <EditDinosaur />
         </Fragment>
     )
 }
