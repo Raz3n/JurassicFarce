@@ -1,7 +1,7 @@
 class Request {
 
     get(url) {
-        return fetch(url)
+        return fetch(`http://localhost:8080${url}`)
             .then((res) => res.json());
     }
 
