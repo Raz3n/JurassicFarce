@@ -5,12 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name="dinosaurs")
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
-//@Entity
-//@Table(name="dinosaurs")
-public abstract class Dinosaur {
+public class Dinosaur {
 
     @Column(name = "stomach")
     private int stomach;
@@ -18,17 +14,16 @@ public abstract class Dinosaur {
     @Column(name = "stomach_capacity")
     private int stomachCapacity;
 
-    @Column(name="species")
-    private String species;
-
     @Column(name="name")
     private String name;
 
     @Column(name="sex")
     private char sex;
 
-    @Column(name="image")
-    private String image;
+    @JsonIgnoreProperties("dinosaurs")
+    @ManyToOne
+    @JoinColumn(name="species_id", nullable = false)
+    private Species species;
 
     @JsonIgnoreProperties("dinosaurs")
     @ManyToOne
@@ -39,13 +34,12 @@ public abstract class Dinosaur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    public Dinosaur(int stomachCapacity, String species, String name, char sex, String image, Paddock paddock) {
+    public Dinosaur(int stomachCapacity, String name, char sex, Species species, Paddock paddock) {
         this.stomachCapacity = stomachCapacity;
         this.stomach = 4;
-        this.species = species;
         this.name = name;
         this.sex = sex;
-        this.image = image;
+        this.species = species;
         this.paddock = paddock;
     }
     public Dinosaur(){
@@ -67,14 +61,6 @@ public abstract class Dinosaur {
         this.stomach = stomach;
     }
 
-    public String getSpecies() {
-        return this.species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
     public String getName() {
         return this.name;
     }
@@ -91,14 +77,6 @@ public abstract class Dinosaur {
         this.sex = sex;
     }
 
-    public String getImage() {
-        return this.image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
     public Paddock getPaddock() {
         return this.paddock;
     }
@@ -113,5 +91,13 @@ public abstract class Dinosaur {
 
     public void setId(Long Id){
         this.Id = Id;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(Species species) {
+        this.species = species;
     }
 }

@@ -16,9 +16,5 @@ public class PaddockController {
 
     @Autowired
     PaddockRepository paddockRepository;
-//
-//    @GetMapping(value = "/paddocks/dinosaur/{id}")
-//    public List<Paddock> findPaddockByDinosaurId(@PathVariable Long id) {
-//        return paddockRepository.fin(id);
-//    }
+
 }

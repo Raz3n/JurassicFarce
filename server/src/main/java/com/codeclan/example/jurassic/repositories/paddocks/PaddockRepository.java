@@ -8,6 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
+//@RepositoryRestResource
 @RepositoryRestResource(excerptProjection = EmbedDinosaurs.class)
 public interface PaddockRepository extends JpaRepository<Paddock, Long>, PaddockRepositoryCustom {
 

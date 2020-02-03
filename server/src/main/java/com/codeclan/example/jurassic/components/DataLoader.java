@@ -1,11 +1,9 @@
 package com.codeclan.example.jurassic.components;
 
-import com.codeclan.example.jurassic.models.Carnivore;
-import com.codeclan.example.jurassic.models.Dinosaur;
-import com.codeclan.example.jurassic.models.Herbivore;
-import com.codeclan.example.jurassic.models.Paddock;
+import com.codeclan.example.jurassic.models.*;
 import com.codeclan.example.jurassic.repositories.dinosaurs.DinosaurRepository;
 import com.codeclan.example.jurassic.repositories.paddocks.PaddockRepository;
+import com.codeclan.example.jurassic.repositories.species.SpeciesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -19,6 +17,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     PaddockRepository paddockRepository;
+
+    @Autowired
+    SpeciesRepository speciesRepository;
 
     public DataLoader(){
 
@@ -47,28 +48,53 @@ public class DataLoader implements ApplicationRunner {
         Paddock johnJungle = new Paddock("John's Jungle");
         paddockRepository.save(johnJungle);
 
-        Dinosaur diplodocus = new Herbivore(5, "Diplodocus", "Juan", 'M', "image1", eduardoEnclave);
-        dinosaurRepository.save(diplodocus);
+        Species brontosaurus = new Species("Brontosaurus", "Herbivore", "image2");
+        speciesRepository.save(brontosaurus);
 
-        Dinosaur stegosaurus = new Herbivore(6, "Stegosaurus", "Sky", 'M', "image2", johnJungle);
-        dinosaurRepository.save(stegosaurus);
+        Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore", "image4");
+        speciesRepository.save(tsintaosaurus);
 
-        Dinosaur triceratops = new Herbivore(4, "Triceratops", "Colin", 'M', "image3", sandySandpit);
-        dinosaurRepository.save(triceratops);
+        Species stegosaurus = new Species("Stegosaurus", "Herbivore", "image5");
+        speciesRepository.save(stegosaurus);
 
-        Dinosaur velociraptor = new Carnivore(7, "Velociraptor", "Sophia", 'F', "image4", catrinCanyon);
-        dinosaurRepository.save(velociraptor);
+        Species parasaurolophus = new Species("Parasaurolophus", "Herbivore", "image6");
+        speciesRepository.save(parasaurolophus);
 
-        Dinosaur tyrannosaurus = new Carnivore(10, "Tyrannosaurus", "Kat", 'F', "image5", goldblumGorge);
-        dinosaurRepository.save(tyrannosaurus);
+        Species triceratops = new Species("Triceratops", "Herbivore", "image7");
+        speciesRepository.save(triceratops);
 
-        Dinosaur eugenasaurus = new Carnivore(9, "Eugenasaurus", "Eugene", 'M', "image6", nelsonNubbin);
-        dinosaurRepository.save(eugenasaurus);
+        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore", "image8");
+        speciesRepository.save(tyrannosaurus);
 
+        Species talarurus = new Species("Talarurus", "Herbivore", "image10");
+        speciesRepository.save(talarurus);
 
+        Species coelophysis = new Species("Coelophysis", "Carnivore", "image9");
+        speciesRepository.save(coelophysis);
 
+        Species diplodocus = new Species("Diplodocus", "Herbivore", "image16");
+        speciesRepository.save(diplodocus);
 
+        Species velociraptor = new Species("Velociraptor", "Carnivore", "image15");
+        speciesRepository.save(velociraptor);
 
+        Dinosaur juan = new Dinosaur(5, "Juan", 'M', diplodocus, eduardoEnclave);
+        dinosaurRepository.save(juan);
+
+        Dinosaur sky = new Dinosaur(6, "Sky", 'M', stegosaurus, johnJungle);
+        dinosaurRepository.save(sky);
+
+        Dinosaur colin = new Dinosaur(4,"Colin", 'M', triceratops, sandySandpit);
+        dinosaurRepository.save(colin);
+
+        Dinosaur sophia = new Dinosaur(7, "Sophia", 'F', velociraptor, catrinCanyon);
+        dinosaurRepository.save(sophia);
+
+        Dinosaur kat = new Dinosaur(10,"Kat", 'F', tyrannosaurus, goldblumGorge);
+        dinosaurRepository.save(kat);
+
+        Dinosaur eugene = new Dinosaur(9, "Eugene", 'M', talarurus, nelsonNubbin);
+        dinosaurRepository.save(eugene);
 
 
 
