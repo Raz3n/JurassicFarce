@@ -8,9 +8,9 @@ const Dinosaur = ({dinosaur}) => {
     }
 
     const url = `/dinosaurs/${dinosaur.id}`
-
     return (
         <Fragment>
+            <img src={dinosaur.species.image} />
             <Link to={url}>
                 {dinosaur.name}
             </Link>

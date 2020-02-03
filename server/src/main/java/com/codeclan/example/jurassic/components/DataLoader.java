@@ -48,7 +48,7 @@ public class DataLoader implements ApplicationRunner {
         Paddock johnJungle = new Paddock("John's Jungle");
         paddockRepository.save(johnJungle);
 
-        Species brontosaurus = new Species("Brontosaurus", "Herbivore", "image2");
+        Species brontosaurus = new Species("Brontosaurus", "Herbivore", "../../../../../client/public/DinosaurImages/Artboard 2@4x.png");
         speciesRepository.save(brontosaurus);
 
         Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore", "image4");
@@ -72,7 +72,9 @@ public class DataLoader implements ApplicationRunner {
         Species coelophysis = new Species("Coelophysis", "Carnivore", "image9");
         speciesRepository.save(coelophysis);
 
-        Species diplodocus = new Species("Diplodocus", "Herbivore", "image16");
+        Species diplodocus = new Species("Diplodocus", "Herbivore", "./DinosaurImages/Artboard_16@4x.png");
+
+
         speciesRepository.save(diplodocus);
 
         Species velociraptor = new Species("Velociraptor", "Carnivore", "image15");
