@@ -7,8 +7,8 @@ import javax.persistence.Entity;
 @DiscriminatorValue("herbivore")
 public class Herbivore extends Dinosaur {
 
-    public Herbivore(int stomachCapacity, String species, String name, char sex, String image, Paddock paddock) {
-        super(stomachCapacity, species, name, sex, image, paddock);
+    public Herbivore(int stomachCapacity, String name, char sex, Species species, Paddock paddock) {
+        super(stomachCapacity, name, sex, species, paddock);
     }
 
     public Herbivore(){

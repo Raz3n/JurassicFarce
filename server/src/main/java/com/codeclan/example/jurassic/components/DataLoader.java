@@ -47,23 +47,25 @@ public class DataLoader implements ApplicationRunner {
         Paddock johnJungle = new Paddock("John's Jungle");
         paddockRepository.save(johnJungle);
 
-        Dinosaur diplodocus = new Herbivore(5, "Diplodocus", "Juan", 'M', "image1", eduardoEnclave);
-        dinosaurRepository.save(diplodocus);
 
-        Dinosaur stegosaurus = new Herbivore(6, "Stegosaurus", "Sky", 'M', "image2", johnJungle);
-        dinosaurRepository.save(stegosaurus);
 
-        Dinosaur triceratops = new Herbivore(4, "Triceratops", "Colin", 'M', "image3", sandySandpit);
-        dinosaurRepository.save(triceratops);
-
-        Dinosaur velociraptor = new Carnivore(7, "Velociraptor", "Sophia", 'F', "image4", catrinCanyon);
-        dinosaurRepository.save(velociraptor);
-
-        Dinosaur tyrannosaurus = new Carnivore(10, "Tyrannosaurus", "Kat", 'F', "image5", goldblumGorge);
-        dinosaurRepository.save(tyrannosaurus);
-
-        Dinosaur eugenasaurus = new Carnivore(9, "Eugenasaurus", "Eugene", 'M', "image6", nelsonNubbin);
-        dinosaurRepository.save(eugenasaurus);
+//        Dinosaur diplodocus = new Herbivore(5, "Juan", 'M',  eduardoEnclave);
+//        dinosaurRepository.save(diplodocus);
+//
+//        Dinosaur stegosaurus = new Herbivore(6, "Stegosaurus", "Sky", 'M', "image2", johnJungle);
+//        dinosaurRepository.save(stegosaurus);
+//
+//        Dinosaur triceratops = new Herbivore(4, "Triceratops", "Colin", 'M', "image3", sandySandpit);
+//        dinosaurRepository.save(triceratops);
+//
+//        Dinosaur velociraptor = new Carnivore(7, "Velociraptor", "Sophia", 'F', "image4", catrinCanyon);
+//        dinosaurRepository.save(velociraptor);
+//
+//        Dinosaur tyrannosaurus = new Carnivore(10, "Tyrannosaurus", "Kat", 'F', "image5", goldblumGorge);
+//        dinosaurRepository.save(tyrannosaurus);
+//
+//        Dinosaur eugenasaurus = new Carnivore(9, "Eugenasaurus", "Eugene", 'M', "image6", nelsonNubbin);
+//        dinosaurRepository.save(eugenasaurus);
 
 
 
