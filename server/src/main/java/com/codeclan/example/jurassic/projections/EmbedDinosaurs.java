@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.config.Projection;
 
 import java.util.List;
 
-@Projection(name="embedDinosaurs", types= {Paddock.class, Species.class})
+@Projection(name="embedDinosaurs", types= Paddock.class)
 public interface EmbedDinosaurs {
 
     long getId();

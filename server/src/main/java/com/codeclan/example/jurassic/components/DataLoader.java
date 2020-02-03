@@ -78,28 +78,23 @@ public class DataLoader implements ApplicationRunner {
         Species velociraptor = new Species("Velociraptor", "Carnivore", "image15");
         speciesRepository.save(velociraptor);
 
-        Dinosaur juan = new Herbivore(5, "Juan", 'M', diplodocus, eduardoEnclave);
+        Dinosaur juan = new Dinosaur(5, "Juan", 'M', diplodocus, eduardoEnclave);
         dinosaurRepository.save(juan);
 
-        Dinosaur sky = new Herbivore(6, "Sky", 'M', stegosaurus, johnJungle);
+        Dinosaur sky = new Dinosaur(6, "Sky", 'M', stegosaurus, johnJungle);
         dinosaurRepository.save(sky);
 
-        Dinosaur colin = new Herbivore(4,"Colin", 'M', triceratops, sandySandpit);
+        Dinosaur colin = new Dinosaur(4,"Colin", 'M', triceratops, sandySandpit);
         dinosaurRepository.save(colin);
 
-        Dinosaur sophia = new Carnivore(7, "Sophia", 'F', velociraptor, catrinCanyon);
+        Dinosaur sophia = new Dinosaur(7, "Sophia", 'F', velociraptor, catrinCanyon);
         dinosaurRepository.save(sophia);
 
-        Dinosaur kat = new Carnivore(10,"Kat", 'F', tyrannosaurus, goldblumGorge);
+        Dinosaur kat = new Dinosaur(10,"Kat", 'F', tyrannosaurus, goldblumGorge);
         dinosaurRepository.save(kat);
 
-        Dinosaur eugene = new Carnivore(9, "Eugene", 'M', talarurus, nelsonNubbin);
+        Dinosaur eugene = new Dinosaur(9, "Eugene", 'M', talarurus, nelsonNubbin);
         dinosaurRepository.save(eugene);
-
-
-
-
-
 
 
 
