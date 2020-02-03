@@ -19,7 +19,7 @@ class DinosaurContainer extends Component {
         // .then(data => console.log(data))
             .then((data) => {
                 this.setState({
-                    dinosaurs: data._embedded.carnivores
+                    dinosaurs: data._embedded.dinosaurs
                 })
             })
     }
