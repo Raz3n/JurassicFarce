@@ -2,25 +2,26 @@ import React from 'react';
 import Paddock from './Paddock'; 
 import {Link} from 'react-router-dom';
 
-const PaddockItem = ({Paddock}) => {
+const PaddockItem = ({paddock}) => {
     if (!Paddock){
         return "...loading paddocks"
     }
 
-    const editURL = "/paddocks/" + paddocks.id + "/edit"
+    
+const dinosaurs = paddock.dinosaurs.map((dinosaur, index) => {
+    return <li key={index}><a href={`/dinosaurs/${dinosaur.id}`}></a></li>
+})
 
-    return(
+return(
+    <div className='component'>
+        <p>{paddock.name}</p>
+        <p> Dinosaurs: </p>
+        <ul>
+            {dinosaurs}
+        </ul>
+    </div>
+)
 
-        <div> 
-            <Paddock paddock={paddock}/> 
-            <Link to={editURL}><button type='button'> Edit {paddock.name} </button> </Link>
-
-        </div>
-
-
-    )
 
 }
  export default PaddockItem; 
-
-

@@ -1,24 +1,25 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Request from '../helpers/Request';
-import PaddockList from '../components/paddocks/PaddockList';
+import DinosaurList from '../components/dinosaurs/DinosaurList';
+import DinosaurItem from '../components/dinosaurs/DinosaurItem';
 
-
-class PaddockContainer extends Component {
+class DinosaurContainer extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            paddocks: []
+            dinosaurs: []
         }
     }
 
     componentDidMount() {
         const request = new Request();
-        request.get('/paddocks')
+        request.get('/dinosaurs')
+        // .then(data => console.log(data))
             .then((data) => {
                 this.setState({
-                    paddocks: data._embedded.paddocks
+                    dinosaurs: data._embedded.carnivores
                 })
             })
     }
@@ -28,8 +29,7 @@ class PaddockContainer extends Component {
                 <Fragment>
                     <Switch>
                         <Route render={(props) => {
-                            return <PaddockList paddocks={this.state.paddocks} />
-                        }} />
+                            return <DinosaurList dinosaurs={this.state.dinosaurs}/> }}/>
                     </Switch>
                 </Fragment>
             </Router>
@@ -38,4 +38,4 @@ class PaddockContainer extends Component {
 
 }
 
-export default PaddockContainer;
+export default DinosaurContainer;

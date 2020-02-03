@@ -9,16 +9,14 @@ const PaddockList = ({ paddocks }) => {
 
     const paddocksList = paddocks.map((paddock, index) => {
         return (
-            <li key={index}>
-                <div>
+            <li key={paddock.id} className='component-item'>
                     <Paddock paddock={paddock} />
-                </div>
             </li>
         )
     })
 
     return (
-        <ul>
+        <ul className='component-list'>
             {paddocksList}
         </ul>
     )

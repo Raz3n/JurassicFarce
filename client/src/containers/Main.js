@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import PaddockContainer from "./PaddockContainer";
+import DinosaurContainer from "./DinosaurContainer";
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 import Home from "./Home";
@@ -15,7 +16,7 @@ class Main extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            {/* <Route path="/dinosaurs" component={DinoContainer} /> */}
+            <Route path="/dinosaurs" component={DinosaurContainer} />
             <Route path="/paddocks" component={PaddockContainer} />
           </Switch>
         </Fragment>
