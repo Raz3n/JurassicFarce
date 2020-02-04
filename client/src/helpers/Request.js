@@ -6,14 +6,14 @@ class Request {
     }
 
     delete(url) {
-        return fetch(url, {
+        return fetch(`http://localhost:8080${url}`, {
             method: "DELETE",
             headers: { 'Content-Type': 'application/json' }
         })
     }
 
     post(url, payload) {
-        return fetch(url, {
+        return fetch(`http://localhost:8080${url}`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
@@ -21,7 +21,7 @@ class Request {
     }
 
     patch(url, payload) {
-        return fetch(url, {
+        return fetch(`http://localhost:8080${url}`, {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
