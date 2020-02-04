@@ -1,16 +1,23 @@
 import React from 'react';
 
 
-const Paddock = ({ paddock }) => {
+const Paddock = ({ paddock, handleSelectedPaddock }) => {
 
     if (!paddock) {
         return "Loading"
     }
 
+    function handleSelect(e) {
+        handleSelectedPaddock(paddock)
+    }
+
     return (
 
         <div className="paddockItem">
-            <img src={paddock.pimage} className="paddockImg"/>
+            <div classname="paddockImageContainer" onClick={handleSelect}>
+                 <img src={paddock.pimage} className="paddockImg"/>
+            </div>
+           
             <div className="paddockData">
                 <div className="row01Data">
                      <p>{paddock.name}</p>
