@@ -20,7 +20,8 @@ const DinosaurList = (props) => {
         return (
             <li key={index} className='component-item'>
                 <Dinosaur dinoIndex={index} dinosaur={dinosaur} paddocks={props.paddocks} 
-                handleMoveDinosaur={props.handleMoveDinosaur}/>
+                handleMoveDinosaur={props.handleMoveDinosaur}
+                handleFeedDino={props.handleFeedDino}/>
             </li>
         )
     })
