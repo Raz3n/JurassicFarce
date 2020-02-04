@@ -62,6 +62,7 @@ class DinosaurCreateForm extends Component {
         const newDinosaur = {
             name: this.state.name,
             sex: this.state.sex,
+            stomach: 3,
             paddock: this.state.selected_paddock,
             species: this.state.selected_species._links.self.href
         }
@@ -87,11 +88,13 @@ class DinosaurCreateForm extends Component {
 
         return (
             <div>
-                 <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
-                 species={this.state.species}/>
-                 <img src={this.state.selected_species.image} 
-                 alt={this.state.selected_species.type} />
-                 <p>{this.state.selected_species.type}</p>
+                <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
+                    species={this.state.species} />
+
+                <img src={this.state.selected_species.image}
+                    alt={this.state.selected_species.type} />
+                <p>{this.state.selected_species.type}</p>
+
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"

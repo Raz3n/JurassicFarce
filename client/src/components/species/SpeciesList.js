@@ -10,7 +10,7 @@ const SpeciesList = ({ species, handleSelectedSpecies }) => {
     const speciesList = species.map((specie, index) => {
         return (
             <li key={index} className='component-item'>
-                    <Species species={specie} handleSelectedSpecies={handleSelectedSpecies} />
+                <Species species={specie} handleSelectedSpecies={handleSelectedSpecies} />
             </li>
         )
     })
@@ -21,7 +21,7 @@ const SpeciesList = ({ species, handleSelectedSpecies }) => {
         </ul>
 
 
- 
+
     )
 }
 
