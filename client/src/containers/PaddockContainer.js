@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Request from "../helpers/Request";
 import PaddockList from "../components/paddocks/PaddockList";
 import Paddock from "../components/paddocks/Paddock";
+import SideBar from "./SideBar";
 
 class PaddockContainer extends Component {
   constructor(props) {
@@ -30,24 +31,31 @@ class PaddockContainer extends Component {
 
   render() {
     return (
-      <>
-        <Router>
-          <Fragment>
-            <Switch>
-              <Route
-                render={props => {
-                  return (
-                    <PaddockList
+        <div className="mainContainer">
+          <div className="mainBody">
+          <PaddockList
                       paddocks={this.state.paddocks}
                       handleSelectedPaddock={this.handleSelectedPaddock}
                     />
-                  );
-                }}
-              />
-            </Switch>
-          </Fragment>
-        </Router>
-      </>
+        </div>
+        <SideBar selectedPaddock={this.state.selectedPaddock} />
+      </div>
+      
+        // <Router>
+        //   <Fragment>
+        //     <Switch>
+        //       <Route
+        //         render={props => {
+        //           return (
+                    
+        //           );
+        //         }}
+        //       />
+        //     </Switch>
+        //   </Fragment>
+        // </Router>
+    //     <SideBar selectedPaddock={this.state.selectedPaddock} />
+    //   </>
     );
   }
 }

@@ -14,7 +14,7 @@ const Paddock = ({paddock, handleSelectedPaddock}) => {
     return (
 
         <div className="paddockItem">
-            <div classname="paddockImageContainer" onClick={handleSelect}>
+            <div className="paddockImageContainer" onClick={handleSelect}>
                  <img src={paddock.pimage} className="paddockImg"/>
             </div>
            

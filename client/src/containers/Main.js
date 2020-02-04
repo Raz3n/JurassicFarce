@@ -23,7 +23,7 @@ class Main extends Component {
               </Switch>
             </div>
           </Router>
-        <SideBar />
+        {/* <SideBar /> */}
       </div>
     );
   }
