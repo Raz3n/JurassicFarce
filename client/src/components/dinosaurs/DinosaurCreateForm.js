@@ -13,22 +13,20 @@ class DinosaurCreateForm extends Component {
             selected_species: ""
         }
         this.handleName = this.handleName.bind(this);
+        this.handleSelectedSex = this.handleSelectedSex.bind(this);
+        this.handlePaddockChange = this.handlePaddockChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     componentDidMount() {
         const request = new Request();
-        request.get('/paddocks').then((data) => {
-            const data = data})
-            const paddockOptions = this.data.map((paddock, index) => {
-                return (
-                    <option key={index}
-                        value={paddock._links.self.href}>
-                        {paddock.name}
-                    </option>
-                )
+        request.get('/paddocks')
+            .then((data) => {
+                this.setState({
+                    paddocks: data._embedded.paddocks
+                })
             })
-            this.setState({ paddocks: paddockOptions })
-        
     }
 
     componentDidMount() {
@@ -39,6 +37,7 @@ class DinosaurCreateForm extends Component {
                     species: data._embedded.species
                 })
             })
+        
     }
 
     handleSelectedSex(event) {
@@ -91,7 +90,7 @@ class DinosaurCreateForm extends Component {
             onChange={this.handleSelectedSex}
             /> Male 
             <select name="paddocks" onChange={this.handlePaddockChange}>
-                {paddockOptions}
+                {this.state.paddocks}
             </select>
             <button type="submit">Save new dinosaur </button>
         </form> 
@@ -100,3 +99,5 @@ class DinosaurCreateForm extends Component {
     }
 
 }
+
+export default DinosaurCreateForm;
