@@ -1,19 +1,15 @@
 import React, { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Paddock = ({paddock}) => {
+const Paddock = ({ paddock }) => {
 
-    if(!paddock) {
+    if (!paddock) {
         return "Loading"
     }
 
-    const url = `/paddocks/${paddock.id}`
-
     return (
         <Fragment>
-            <Link to={url}>
-                {paddock.name}
-            </Link>
+            {paddock.name}
         </Fragment>
     )
 }

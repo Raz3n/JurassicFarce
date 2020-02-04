@@ -4,14 +4,11 @@ import Dinosaur from './Dinosaur';
 
 const DinosaurList = (props) => {
 
-    // if (props.dinosaurs.length === 0) {
-    //     return (<p>SOON...</p>)
-    // }
 
     const dinosaurs = props.dinosaurs.map((dinosaur, index) => {
         return (
             <li key={index} className='component-item'>
-                    <Dinosaur dinosaur={dinosaur} />
+                <Dinosaur dinosaur={dinosaur} paddocks={props.paddocks} />
             </li>
         )
     })
