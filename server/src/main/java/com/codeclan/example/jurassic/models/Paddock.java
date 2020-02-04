@@ -37,8 +37,8 @@ public class Paddock {
     public Paddock() {
     }
 
-    public Paddock(String name, Boolean available, Boolean herb_friendly, String pimage){
-        this.capacity = 4;
+    public Paddock(int capacity, String name, Boolean available, Boolean herb_friendly, String pimage){
+        this.capacity = capacity;
         this.name = name;
         this.available = available;
         this.herb_friendly = herb_friendly; 
