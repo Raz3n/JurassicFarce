@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => (
-  <div>
+  <div className="navbar">
     <h1>Jurassic Farce</h1>
     <ul>
       <li>
@@ -18,7 +18,7 @@ const NavBar = () => (
         <Link to="/species">species</Link>
       </li>
     </ul>
-    <button>Kill All</button>
+    {/* <button>Kill All</button> */}
   </div>
 );
 

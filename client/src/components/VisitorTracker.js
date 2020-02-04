@@ -9,9 +9,9 @@ class VisitorTracker extends Component {
   }
   render() {
     return (
-      <div>
-        <h4>Visitor Count:{this.state.visitorCount}</h4>
-        <h4>Days since last incident: 0</h4>
+      <div className="topTracker">
+        <p>Visitor Count:{this.state.visitorCount}</p>
+        <p>Days since last incident: 0</p>
       </div>
     );
   }

@@ -1,19 +1,21 @@
 import React, { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import EditDinosaur from './EditDinosaur';
 
-const Dinosaur = ({dinosaur}) => {
 
-    if(!dinosaur) {
+const Dinosaur = ({ dinosaur, paddocks }) => {
+
+    if (!dinosaur) {
         return "Loading"
     }
 
-    const url = `/dinosaurs/${dinosaur.id}`
-
     return (
         <Fragment>
-            <Link to={url}>
-                {dinosaur.name}
-            </Link>
+            <h4>{dinosaur.name}</h4>
+            <img src={dinosaur.species.image} />
+            <p>{dinosaur.paddock.name}</p>
+            <p>{dinosaur.species.type}</p>
+            <p>{dinosaur.species.diet}</p>
+            <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} />
         </Fragment>
     )
 }

@@ -9,7 +9,8 @@ class DinosaurContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            dinosaurs: []
+            dinosaurs: [],
+            paddocks: []
         }
     }
 
@@ -22,6 +23,14 @@ class DinosaurContainer extends Component {
                     dinosaurs: data._embedded.dinosaurs
                 })
             })
+            .then(() => {
+                request.get('/paddocks')
+                .then((data) => {
+                    this.setState({
+                        paddocks: data._embedded.paddocks
+                    })
+                })
+            })
     }
     render() {
         return (
@@ -29,7 +38,7 @@ class DinosaurContainer extends Component {
                 <Fragment>
                     <Switch>
                         <Route render={(props) => {
-                            return <DinosaurList dinosaurs={this.state.dinosaurs}/> }}/>
+                            return <DinosaurList dinosaurs={this.state.dinosaurs} paddocks={this.state.paddocks}/> }}/>
                     </Switch>
                 </Fragment>
             </Router>
