@@ -135,6 +135,7 @@ ul.component-list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-inline-start: 0;
 }
 
 .component-list-paddock li {
@@ -145,4 +146,64 @@ ul.component-list {
   box-sizing: border-box;
   display: flex;
   width: 30%;
+}
+
+li.component-item .dinoItem{
+  width: 50%;
+}
+
+.singleDinosaur {
+  display: flex;
+  border-bottom: 1px solid grey;
+}
+
+.rightPanelSingleDino h4 {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
+}
+.rightPanelSingleDino p {
+  line-height: 0.5em;
+  font-size: 0.785em;
+  color: #abacbd;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.rightPanelSingleDino select {
+  margin-left: 13px;
+  background: #1e1e1f;
+  color: #fff;
+  box-shadow: 0px -1px 4px #757575ab, 1px 3px 6px black, inset 0 -2px 6px black;
+  border: 1px solid #3e3e3e;
+  height: 26px;
+  border-radius: 42px !important;
+  display: block;
+  text-transform: uppercase;
+}
+.paddockSingleDino {
+  display: flex;
+}
+.dinoImage {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  max-width: 140px;
+  box-shadow: 0 8px 14px black;
+}
+.leftPanelSingleDino {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0 5% 5% 0;
+}
+
+.listDinosaurs .component-item {
+  width: 50%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+ul.component-list.innerContainer.listDinosaurs {
+  padding: 40px;
 }

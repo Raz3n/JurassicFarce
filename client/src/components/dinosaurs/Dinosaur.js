@@ -9,14 +9,26 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, dinoIndex }) => {
     }
 
     return (
-        <Fragment>
+        <div className="singleDinosaur">
+            <div className="leftPanelSingleDino">
+            <img src={dinosaur.species.image} className="dinoImage"/>
+            </div>
+           <div className="rightPanelSingleDino">
             <h4>{dinosaur.name}</h4>
-            <img src={dinosaur.species.image} alt={dinosaur.species.name}/>
-            <p>{dinosaur.paddock.name}</p>
+           
+            <div className="paddockSingleDino">
+                <p>PADDOCK:</p>
+                <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} />
+            </div>
+          
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
-            <EditDinosaur dinoIndex={dinoIndex} paddocks={paddocks} dinosaur={dinosaur} handleMoveDinosaur={handleMoveDinosaur}/>
-        </Fragment>
+            
+            <button></button>
+
+           </div>
+           
+        </div>
     )
 }
 

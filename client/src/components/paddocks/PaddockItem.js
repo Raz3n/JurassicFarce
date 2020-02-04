@@ -7,8 +7,10 @@ const PaddockItem = ({ paddock }) => {
         return "...loading paddocks"
     }
 
+    const dinosaurs = paddock.dinosaurs.map((dinosaur, index) => {
+        return <li key={index}><a href={`/dinosaurs/${dinosaur.id}`}></a></li>
+    })
 
-<<<<<<< HEAD
 return(
     <div className='componentPaddock'>
         <p>{paddock.name}</p>
@@ -17,22 +19,9 @@ return(
             {dinosaurs}
         </ul>
     </div>
-)
-=======
-    const dinosaurs = paddock.dinosaurs.map((dinosaur, index) => {
-        return <li key={index}><a href={`/dinosaurs/${dinosaur.id}`}></a></li>
-    })
->>>>>>> develop
 
-    return (
-        <div className='component'>
-            <p>{paddock.name}</p>
-            <p> Dinosaurs: </p>
-            <ul>
-                {dinosaurs}
-            </ul>
-        </div>
-    )
+
+)
 
 }
 export default PaddockItem; 
