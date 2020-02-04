@@ -8,6 +8,9 @@ import org.springframework.data.rest.core.config.Projection;
 public interface EmbedSpecies {
 
     long getId();
+    String getType();
+    String getDiet();
     int getStomachCapacity();
+    String getImage();
     Dinosaur getDinosaur();
 }
