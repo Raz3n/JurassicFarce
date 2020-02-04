@@ -1,24 +1,24 @@
 import React, { Fragment } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Species = ({species, handleSelectedSpecies}) => {
+const Species = ({ species, handleSelectedSpecies }) => {
 
-    if(!species) {
+    if (!species) {
         return "Loading"
     }
 
-    function handleSelect() {
+    function handleSelect(e) {
         handleSelectedSpecies(species)
     }
 
     return (
-        
+
         <div onClick={handleSelect}>
-            
-                <p>{species.type}</p>
-                <p>{species.diet}</p>
-                <img src={species.image} alt={species.type}/>
-           
+
+            <p>{species.type}</p>
+            <p>{species.diet}</p>
+            <img src={species.image} alt={species.type} />
+
         </div>
     )
 }

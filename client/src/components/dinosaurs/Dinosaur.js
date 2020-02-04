@@ -9,6 +9,11 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
         return "Loading"
     }
 
+    function dinoHunger() {
+        const num =  (100 - ((dinosaur.stomach / dinosaur.species.stomachCapacity) * 100))
+        return Math.round(num * 100) / 100
+    }
+
     return (
         <div className="singleDinosaur">
             <div className="leftPanelSingleDino">
@@ -25,9 +30,13 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
             <div className="feedingBox">
-                <p>{dinosaur.stomach}</p>
+                <p>Hanger Level: {dinoHunger()}%</p>
                 <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
             </div>
+            
+            
+           
+
            </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/Request';
+import SpeciesList from '../species/SpeciesList';
 
 class DinosaurCreateForm extends Component {
     constructor(props) {
@@ -10,12 +11,14 @@ class DinosaurCreateForm extends Component {
             sex: "",
             selected_paddock: "",
             species: [],
-            selected_species: ""
+            selected_species: {}
         }
         this.handleName = this.handleName.bind(this);
         this.handleSelectedSex = this.handleSelectedSex.bind(this);
         this.handlePaddockChange = this.handlePaddockChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSelectedSpecies = this.handleSelectedSpecies.bind(this);
+        this.filterPaddocks = this.filterPaddocks.bind(this);
     }
 
     componentDidMount() {
@@ -60,6 +63,7 @@ class DinosaurCreateForm extends Component {
         const newDinosaur = {
             name: this.state.name,
             sex: this.state.sex,
+            stomach: 3,
             paddock: this.state.selected_paddock,
             species: this.state.selected_species._links.self.href
         }
@@ -69,20 +73,39 @@ class DinosaurCreateForm extends Component {
         })
     }
 
-    
+    handleSelectedSpecies(species) {
+        this.setState({ selected_species: species })
+    }
+
+    filterPaddocks() {
+
+        const isHerbFriendly = this.state.selected_species.diet === "Herbivore"
+
+        return this.state.paddocks
+            .filter(paddock => (
+                paddock.herbFriendly === isHerbFriendly
+            ))
+            .map((paddock, index) => {
+                return (
+                    <option key={index}
+                        value={paddock._links.self.href}>
+                        {paddock.name}
+                    </option>
+                )
+            })
+    }
 
     render() {
-        const paddockList = this.state.paddocks.map((paddock, index) => {
-            return (
-                <option key={index}
-                    value={paddock._links.self.href}>
-                    {paddock.name}
-                </option>
-            )
-        })
-
+            
         return (
             <div>
+                <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
+                    species={this.state.species} />
+
+                <img src={this.state.selected_species.image}
+                    alt={this.state.selected_species.type} />
+                <p>{this.state.selected_species.type}</p>
+
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"
@@ -90,6 +113,7 @@ class DinosaurCreateForm extends Component {
                         name="name"
                         value={this.state.name}
                         onChange={this.handleName}
+                        required
                     />
                     <input
                         type="radio"
@@ -104,7 +128,7 @@ class DinosaurCreateForm extends Component {
                         onChange={this.handleSelectedSex}
                     /> Male
             <select name="paddocks" onChange={this.handlePaddockChange}>
-                        {paddockList}
+                        {this.filterPaddocks()}
                     </select>
                     <button type="submit">Save new dinosaur </button>
                 </form>
