@@ -13,6 +13,7 @@ public interface EmbedPaddocks {
     char getSex();
     int getStomach();
     int getStomachCapacity();
+
     Species getSpecies();
     Paddock getPaddock();
 }
