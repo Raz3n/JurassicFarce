@@ -1,16 +1,16 @@
 import React from 'react';
 import Species from './Species';
 
-const SpeciesList = ({ species }) => {
+const SpeciesList = ({ species, handleSelectedSpecies }) => {
 
     if (species.length === 0) {
         return (<p>Loading...</p>)
     }
 
-    const speciesList = species.map((species, index) => {
+    const speciesList = species.map((specie, index) => {
         return (
             <li key={index} className='component-item'>
-                    <Species species={species} />
+                    <Species species={specie} handleSelectedSpecies={handleSelectedSpecies} />
             </li>
         )
     })
@@ -19,6 +19,9 @@ const SpeciesList = ({ species }) => {
         <ul className='component-list'>
             {speciesList}
         </ul>
+
+
+ 
     )
 }
 

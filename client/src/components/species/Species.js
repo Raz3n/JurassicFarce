@@ -1,22 +1,25 @@
 import React, { Fragment } from 'react';
 import {Link} from 'react-router-dom';
 
-const Species = ({species}) => {
+const Species = ({species, handleSelectedSpecies}) => {
 
     if(!species) {
         return "Loading"
     }
 
-    // const url = `/species/${species.id}`
+    function handleSelect() {
+        handleSelectedSpecies(species)
+    }
 
     return (
-        <Fragment>
+        
+        <div onClick={handleSelect}>
             
                 <p>{species.type}</p>
                 <p>{species.diet}</p>
                 <p>{species.image}</p>
            
-        </Fragment>
+        </div>
     )
 }
 

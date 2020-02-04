@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Request from '../helpers/Request';
 import SpeciesList from '../components/species/SpeciesList';
+import Species from '../components/species/Species';
 
 
 class SpeciesContainer extends Component {
@@ -9,8 +10,10 @@ class SpeciesContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            species: []
+            species: [],
+            type: {}
         }
+        this.handleSelectedSpecies = this.handleSelectedSpecies.bind(this); 
     }
 
     componentDidMount() {
@@ -22,17 +25,18 @@ class SpeciesContainer extends Component {
                 })
             })
     }
+
+
+   handleSelectedSpecies(type){
+       this.setState({type: type})
+   }
+
+
     render() {
         return (
-            <Router>
-                <Fragment>
-                    <Switch>
-                        <Route render={(props) => {
-                            return <SpeciesList species={this.state.species} />
-                        }} />
-                    </Switch>
-                </Fragment>
-            </Router>
+       <div>
+           <SpeciesList species={this.state.species} handleSelectedSpecies={this.handleSelectedSpecies}/> 
+       </div>
         )
     }
 
