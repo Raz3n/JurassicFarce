@@ -27,25 +27,25 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Paddock catrinCanyon = new Paddock("Catrin Canyon", true, "./paddocks/paddock_01.svg");
+        Paddock catrinCanyon = new Paddock("Catrin Canyon", true, "./paddock_01.svg");
         paddockRepository.save(catrinCanyon);
 
-        Paddock morgaineMeadows = new Paddock("Morgaine Meadows", true, "./paddocks/paddock_02.svg");
+        Paddock morgaineMeadows = new Paddock("Morgaine Meadows", true, "./paddock_02.svg");
         paddockRepository.save(morgaineMeadows);
 
-        Paddock nelsonNubbin = new Paddock("Nelson's Nubbin", true, "./paddocks/paddock_03.svg");
+        Paddock nelsonNubbin = new Paddock("Nelson's Nubbin", true, "./paddock_03.svg");
         paddockRepository.save(nelsonNubbin);
 
-        Paddock eduardoEnclave = new Paddock("Eduardo Enclave", true, "./paddocks/paddock_04.svg");
+        Paddock eduardoEnclave = new Paddock("Eduardo Enclave", true, "./paddock_04.svg");
         paddockRepository.save(eduardoEnclave);
 
-        Paddock goldblumGorge = new Paddock("Goldblum Gorge", false, "./paddocks/paddock_05.svg");
+        Paddock goldblumGorge = new Paddock("Goldblum Gorge", false, "./paddock_05.svg");
         paddockRepository.save(goldblumGorge);
 
-        Paddock sandySandpit = new Paddock("Sandy's Sandpit", false, "./paddocks/paddock_06.svg");
+        Paddock sandySandpit = new Paddock("Sandy's Sandpit", false, "./paddock_06.svg");
         paddockRepository.save(sandySandpit);
 
-        Paddock johnJungle = new Paddock("John's Jungle", false, "./paddocks/paddock_07.svg");
+        Paddock johnJungle = new Paddock("John's Jungle", false, "./paddock_07.svg");
         paddockRepository.save(johnJungle);
 
         Species brontosaurus = new Species("Brontosaurus", "Herbivore", 10,"./DinosaurImages/Artboard2@4x.png");

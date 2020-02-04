@@ -17,9 +17,7 @@ const PaddockList = ({ paddocks }) => {
 
     return (
         <ul className='innerContainer component-list-paddock'>
-         
                 {paddocksList}
-           
         </ul>
     )
 }

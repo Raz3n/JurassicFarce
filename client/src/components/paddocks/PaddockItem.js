@@ -14,6 +14,7 @@ const PaddockItem = ({ paddock }) => {
 return(
     <div className='componentPaddock'>
         <p>{paddock.name}</p>
+        
         <p> Dinosaurs: </p>
         <ul>
             {dinosaurs}

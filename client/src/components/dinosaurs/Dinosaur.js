@@ -19,8 +19,7 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
            
             <div className="paddockSingleDino">
                 <p>PADDOCK:</p>
-                <EditDinosaur paddocks={paddocks} dinosaur={dinosaur}
-                handleMoveDinosaur={handleMoveDinosaur} />
+                <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} handleMoveDinosaur={handleMoveDinosaur} />
             </div>
           
             <p>{dinosaur.species.type}</p>
@@ -33,6 +32,7 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
            
         </div>
     )
+
 }
 
 export default Dinosaur;
