@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import VisitorTracker from "../components/VisitorTracker";
-import Paddock from "../components/paddocks/Paddock";
+import PaddockContainer from "../containers/PaddockContainer";
 
-class SideBar extends Component {
-
-  render() {
+const SideBar = () => {
   return (
-  <div className="trackerContainer">
+    <div className="trackerContainer">
       <VisitorTracker />
       
-      <Paddock />
-  </div>
-  )}
+      
+    </div>
+  );
 };
 
 export default SideBar;

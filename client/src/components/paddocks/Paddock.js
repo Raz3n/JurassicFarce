@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-const Paddock = ({ paddock, handleSelectedPaddock }) => {
+const Paddock = ({paddock, handleSelectedPaddock}) => {
 
     if (!paddock) {
         return "Loading"
     }
 
-    function handleSelect(e) {
+    function handleSelect(event) {
         handleSelectedPaddock(paddock)
     }
 
