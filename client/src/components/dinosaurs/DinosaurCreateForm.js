@@ -83,7 +83,8 @@ class DinosaurCreateForm extends Component {
 
         return this.state.paddocks
             .filter(paddock => (
-                paddock.herbFriendly === isHerbFriendly
+                paddock.herbFriendly === isHerbFriendly &&
+                paddock.capacity > paddock.dinosaurs.length
             ))
             .map((paddock, index) => {
                 return (
