@@ -41,7 +41,7 @@ public class Dinosaur {
     }
     public Dinosaur(){
     }
-    
+
     public int getStomach() {
         return this.stomach;
     }

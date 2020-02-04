@@ -20,6 +20,9 @@ public class Species {
     @Column(name = "diet")
     private String diet;
 
+    @Column(name= "stomachCapacity")
+    private int stomachCapacity;
+
     @Column(name = "image")
     private String image;
 
@@ -31,9 +34,10 @@ public class Species {
 
     }
 
-    public Species(String type, String diet, String image) {
+    public Species(String type, String diet, int stomachCapacity, String image) {
         this.type = type;
         this.diet = diet;
+        this.stomachCapacity = stomachCapacity;
         this.image = image;
         this.dinosaurs = new ArrayList<>();
     }
@@ -52,6 +56,14 @@ public class Species {
 
     public void setDiet(String diet) {
         this.diet = diet;
+    }
+
+    public int getStomachCapacity() {
+        return stomachCapacity;
+    }
+
+    public void setStomachCapacity(int stomachCapacity) {
+        this.stomachCapacity = stomachCapacity;
     }
 
     public String getImage() {

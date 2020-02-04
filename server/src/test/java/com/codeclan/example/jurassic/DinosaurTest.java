@@ -16,19 +16,14 @@ public class DinosaurTest {
 
     @Before
     public void before() {
-        species = new Species("Diplodocus", "Herbivore", "image1");
+        species = new Species("Diplodocus", "Herbivore", 10, "./DinosaurImages/Artboard2@4x.png");
         paddock = new Paddock("Morgaine Meadows", true, "./paddocks/paddock_02.svg");
-        herbivore = new Dinosaur(5, "Nelson", 'M', species, paddock);
+        herbivore = new Dinosaur("Nelson", 'M', species, paddock);
     }
 
     @Test
     public void canGetName() {
         assertEquals("Nelson", herbivore.getName());
-    }
-
-    @Test
-    public void canGetStomachCapacity() {
-        assertEquals(5, herbivore.getStomachCapacity());
     }
 
     @Test
