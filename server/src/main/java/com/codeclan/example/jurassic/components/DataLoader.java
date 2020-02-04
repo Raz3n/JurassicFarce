@@ -27,25 +27,25 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Paddock catrinCanyon = new Paddock("Catrin Canyon");
+        Paddock catrinCanyon = new Paddock("Catrin Canyon", true, "./paddocks/paddock_01.svg");
         paddockRepository.save(catrinCanyon);
 
-        Paddock morgaineMeadows = new Paddock("Morgaine Meadows");
+        Paddock morgaineMeadows = new Paddock("Morgaine Meadows", true, "./paddocks/paddock_02.svg");
         paddockRepository.save(morgaineMeadows);
 
-        Paddock nelsonNubbin = new Paddock("Nelson's Nubbin");
+        Paddock nelsonNubbin = new Paddock("Nelson's Nubbin", true, "./paddocks/paddock_03.svg");
         paddockRepository.save(nelsonNubbin);
 
-        Paddock eduardoEnclave = new Paddock("Eduardo Enclave");
+        Paddock eduardoEnclave = new Paddock("Eduardo Enclave", true, "./paddocks/paddock_04.svg");
         paddockRepository.save(eduardoEnclave);
 
-        Paddock goldblumGorge = new Paddock("Goldblum Gorge");
+        Paddock goldblumGorge = new Paddock("Goldblum Gorge", false, "./paddocks/paddock_05.svg");
         paddockRepository.save(goldblumGorge);
 
-        Paddock sandySandpit = new Paddock("Sandy's Sandpit");
+        Paddock sandySandpit = new Paddock("Sandy's Sandpit", false, "./paddocks/paddock_06.svg");
         paddockRepository.save(sandySandpit);
 
-        Paddock johnJungle = new Paddock("John's Jungle");
+        Paddock johnJungle = new Paddock("John's Jungle", false, "./paddocks/paddock_07.svg");
         paddockRepository.save(johnJungle);
 
         Species brontosaurus = new Species("Brontosaurus", "Herbivore", "./DinosaurImages/Artboard2@4x.png");
@@ -81,19 +81,19 @@ public class DataLoader implements ApplicationRunner {
         Dinosaur juan = new Dinosaur(5, "Juan", 'M', diplodocus, eduardoEnclave);
         dinosaurRepository.save(juan);
 
-        Dinosaur sky = new Dinosaur(6, "Sky", 'M', stegosaurus, johnJungle);
+        Dinosaur sky = new Dinosaur(6, "Sky", 'M', stegosaurus, nelsonNubbin);
         dinosaurRepository.save(sky);
 
-        Dinosaur colin = new Dinosaur(4,"Colin", 'M', triceratops, sandySandpit);
+        Dinosaur colin = new Dinosaur(4,"Colin", 'M', triceratops, catrinCanyon);
         dinosaurRepository.save(colin);
 
-        Dinosaur sophia = new Dinosaur(7, "Sophia", 'F', velociraptor, catrinCanyon);
+        Dinosaur sophia = new Dinosaur(7, "Sophia", 'F', velociraptor, morgaineMeadows);
         dinosaurRepository.save(sophia);
 
-        Dinosaur kat = new Dinosaur(10,"Kat", 'F', tyrannosaurus, goldblumGorge);
+        Dinosaur kat = new Dinosaur(10,"Kat", 'F', tyrannosaurus, catrinCanyon);
         dinosaurRepository.save(kat);
 
-        Dinosaur eugene = new Dinosaur(9, "Eugene", 'M', talarurus, nelsonNubbin);
+        Dinosaur eugene = new Dinosaur(9, "Eugene", 'M', talarurus, eduardoEnclave);
         dinosaurRepository.save(eugene);
 
 

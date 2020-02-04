@@ -19,8 +19,13 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
            
             <div className="paddockSingleDino">
                 <p>PADDOCK:</p>
+<<<<<<< HEAD
                 <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} 
                 handleMoveDinosaur={handleMoveDinosaur}/>
+=======
+                <EditDinosaur paddocks={paddocks} dinosaur={dinosaur}
+                handleMoveDinosaur={handleMoveDinosaur} />
+>>>>>>> f5e44cf19107e0333c0f53daae6953f483bc9a1b
             </div>
           
             <p>{dinosaur.species.type}</p>

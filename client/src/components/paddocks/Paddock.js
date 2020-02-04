@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 
 const Paddock = ({ paddock }) => {
@@ -8,9 +8,10 @@ const Paddock = ({ paddock }) => {
     }
 
     return (
-        <Fragment>
+        <div>
+            
             {paddock.name}
-        </Fragment>
+        </div>
     )
 }
 

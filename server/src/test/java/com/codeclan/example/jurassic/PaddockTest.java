@@ -12,7 +12,7 @@ public class PaddockTest {
 
     @Before
     public void before() {
-        paddock = new Paddock("Morgaine Meadows");
+        paddock = new Paddock("Morgaine Meadows", true, "./paddocks/paddock_02.svg");
     }
 
     @Test
