@@ -16,20 +16,17 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
     )
 
     function handleSelect(e) {
+        e.preventDefault()
         handleMoveDinosaur(e.target.value, dinosaur.id);
     }
 
     return (
-        // <form onSubmit={handleSelect}>
             <select onChange={handleSelect}>
                 <option defaultValue={dinosaur.paddock}>
                     {dinosaur.paddock.name}
                 </option>
                 {paddockList}
             </select>
-        //     <button value="submit">Move Dino</button>
-        // </form>
-
     )
 }
 
