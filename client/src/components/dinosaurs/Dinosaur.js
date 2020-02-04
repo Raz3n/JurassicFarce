@@ -29,12 +29,15 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
           
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
-            <p>Hanger Level: {dinoHunger()}%</p>
+            <div className="feedingBox">
+                <p>Hanger Level: {dinoHunger()}%</p>
+                <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
+            </div>
             
-            <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
+            
+           
 
            </div>
-           
         </div>
     )
 

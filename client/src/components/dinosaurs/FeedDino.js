@@ -6,7 +6,7 @@ const FeedDino = ({ dinosaur, handleFeedDino }) => {
         handleFeedDino(dinosaur)
     }
     return(
-        <button onClick={handleClick}>+</button>
+        <button onClick={handleClick} className="feedButton">+</button>
     )
 
 }
