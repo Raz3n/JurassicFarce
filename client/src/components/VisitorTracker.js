@@ -4,7 +4,7 @@ class VisitorTracker extends Component {
   constructor() {
     super();
     this.state = {
-      visitorCount: 500
+      visitorCount: 300
     };
     this.addVisitors = this.addVisitors.bind(this)
   }
