@@ -6,9 +6,6 @@ const NavBar = () => (
     <h1>Jurassic Farce</h1>
     <ul>
       <li>
-        <Link to="/">Overview</Link>
-      </li>
-      <li>
         <Link to="/dinosaurs">Dinosaurs</Link>
       </li>
       <li>
