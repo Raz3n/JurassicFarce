@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import EditDinosaur from './EditDinosaur';
 
 
-const Dinosaur = ({ dinosaur, paddocks }) => {
+const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, dinoIndex }) => {
 
     if (!dinosaur) {
         return "Loading"
@@ -15,7 +15,7 @@ const Dinosaur = ({ dinosaur, paddocks }) => {
             </div>
            <div className="rightPanelSingleDino">
             <h4>{dinosaur.name}</h4>
-            {/* <p>{dinosaur.paddock.name}</p> */}
+           
             <div className="paddockSingleDino">
                 <p>PADDOCK:</p>
                 <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} />
@@ -24,7 +24,7 @@ const Dinosaur = ({ dinosaur, paddocks }) => {
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
             
-            <button/>
+            <button></button>
 
            </div>
            

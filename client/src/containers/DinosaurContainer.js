@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Request from '../helpers/Request';
 import DinosaurList from '../components/dinosaurs/DinosaurList';
-import DinosaurItem from '../components/dinosaurs/DinosaurItem';
+
 
 class DinosaurContainer extends Component {
 
@@ -10,8 +10,9 @@ class DinosaurContainer extends Component {
         super(props);
         this.state = {
             dinosaurs: [],
-            paddocks: []
+            paddocks: [],
         }
+        this.handleMoveDinosaur = this.handleMoveDinosaur.bind(this);
     }
 
     componentDidMount() {
@@ -32,13 +33,25 @@ class DinosaurContainer extends Component {
                 })
             })
     }
+
+    handleMoveDinosaur(newPaddock, dinoID) {
+        
+        const request = new Request();
+        request.patch('/dinosaurs/' + dinoID, {paddock: newPaddock}).then(() => {
+            window.location = '/dinosaurs'
+        })
+    
+    }
+
     render() {
         return (
             <Router>
                 <Fragment>
                     <Switch>
                         <Route render={(props) => {
-                            return <DinosaurList dinosaurs={this.state.dinosaurs} paddocks={this.state.paddocks}/> }}/>
+                            return <DinosaurList dinosaurs={this.state.dinosaurs} 
+                            paddocks={this.state.paddocks} 
+                            handleMoveDinosaur={this.handleMoveDinosaur} /> }} />
                     </Switch>
                 </Fragment>
             </Router>

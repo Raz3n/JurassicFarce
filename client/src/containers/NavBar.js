@@ -14,6 +14,9 @@ const NavBar = () => (
       <li>
         <Link to="/paddocks">Paddocks</Link>
       </li>
+      <li>
+        <Link to="/species">species</Link>
+      </li>
     </ul>
     {/* <button>Kill All</button> */}
   </div>

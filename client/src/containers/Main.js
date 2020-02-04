@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import SpeciesContainer from "./SpeciesContainer";
 
 class Main extends Component {
   render() {
@@ -18,6 +19,7 @@ class Main extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/dinosaurs" component={DinosaurContainer} />
                 <Route path="/paddocks" component={PaddockContainer} />
+                <Route path="/species" component={SpeciesContainer}/> 
               </Switch>
             </div>
           </Router>
