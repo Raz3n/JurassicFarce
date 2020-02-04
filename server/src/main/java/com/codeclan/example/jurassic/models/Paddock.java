@@ -22,7 +22,10 @@ public class Paddock {
     private String name;
 
     @Column(name="available")
-    private boolean available;
+    private Boolean available;
+
+    @Column(name="herbivore_friendly")
+    private Boolean herb_friendly; 
 
     @Column(name="pimage")
     private String pimage;
@@ -34,10 +37,11 @@ public class Paddock {
     public Paddock() {
     }
 
-    public Paddock(String name, boolean available, String pimage){
+    public Paddock(String name, Boolean available, Boolean herb_friendly, String pimage){
         this.capacity = 4;
         this.name = name;
-        this.available = false;
+        this.available = available;
+        this.herb_friendly = herb_friendly; 
         this.pimage = pimage;
         this.dinosaurs = new ArrayList<Dinosaur>();
     }
@@ -58,12 +62,20 @@ public class Paddock {
         this.name = name;
     }
 
-    public boolean isAvailable() {
+    public Boolean isAvailable() {
         return available;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(Boolean available) {
         this.available = available;
+    }
+
+    public Boolean getHerbFriendly(){
+        return herb_friendly;
+    }
+
+    public void setHerbFriendly(Boolean herb_friendly){
+        this.herb_friendly = herb_friendly;
     }
 
     public String getPimage() {
