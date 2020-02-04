@@ -99,6 +99,7 @@ class DinosaurCreateForm extends Component {
                         name="name"
                         value={this.state.name}
                         onChange={this.handleName}
+                        required
                     />
                     <input
                         type="radio"
