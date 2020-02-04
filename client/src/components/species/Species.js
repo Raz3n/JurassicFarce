@@ -7,7 +7,7 @@ const Species = ({species, handleSelectedSpecies}) => {
         return "Loading"
     }
 
-    function handleSelect() {
+    function handleSelect(e) {
         handleSelectedSpecies(species)
     }
 

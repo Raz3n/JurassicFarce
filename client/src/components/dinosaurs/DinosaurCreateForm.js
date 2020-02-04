@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/Request';
+import SpeciesList from '../species/SpeciesList';
 
 class DinosaurCreateForm extends Component {
     constructor(props) {
@@ -10,12 +11,13 @@ class DinosaurCreateForm extends Component {
             sex: "",
             selected_paddock: "",
             species: [],
-            selected_species: ""
+            selected_species: {}
         }
         this.handleName = this.handleName.bind(this);
         this.handleSelectedSex = this.handleSelectedSex.bind(this);
         this.handlePaddockChange = this.handlePaddockChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSelectedSpecies = this.handleSelectedSpecies.bind(this);
     }
 
     componentDidMount() {
@@ -69,7 +71,9 @@ class DinosaurCreateForm extends Component {
         })
     }
 
-    
+    handleSelectedSpecies(species) {
+        this.setState({ selected_species: species })
+    }
 
     render() {
         const paddockList = this.state.paddocks.map((paddock, index) => {
@@ -83,6 +87,11 @@ class DinosaurCreateForm extends Component {
 
         return (
             <div>
+                 <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
+                 species={this.state.species}/>
+                 <img src={this.state.selected_species.image} 
+                 alt={this.state.selected_species.type} />
+                 <p>{this.state.selected_species.type}</p>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"
