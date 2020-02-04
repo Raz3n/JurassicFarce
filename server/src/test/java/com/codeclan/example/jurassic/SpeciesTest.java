@@ -12,7 +12,7 @@ public class SpeciesTest {
 
     @Before
     public void before() {
-        species = new Species("Diplodocus", "Herbivore", "image1");
+        species = new Species("Diplodocus", "Herbivore", 10, "./DinosaurImages/Artboard2@4x.png");
     }
 
     @Test
@@ -23,6 +23,11 @@ public class SpeciesTest {
     @Test
     public void canGetDiet() {
         assertEquals("Herbivore", species.getDiet());
+    }
+
+    @Test
+    public void canGetStomachCapacity() {
+        assertEquals(10, species.getStomachCapacity());
     }
 
     @Test

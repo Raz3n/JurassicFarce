@@ -12,7 +12,6 @@ public interface EmbedPaddocks {
     String getName();
     char getSex();
     int getStomach();
-    int getStomachCapacity();
 
     Species getSpecies();
     Paddock getPaddock();

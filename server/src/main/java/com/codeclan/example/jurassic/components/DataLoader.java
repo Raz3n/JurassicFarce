@@ -48,52 +48,52 @@ public class DataLoader implements ApplicationRunner {
         Paddock johnJungle = new Paddock("John's Jungle", false, "./paddocks/paddock_07.svg");
         paddockRepository.save(johnJungle);
 
-        Species brontosaurus = new Species("Brontosaurus", "Herbivore", "./DinosaurImages/Artboard2@4x.png");
+        Species brontosaurus = new Species("Brontosaurus", "Herbivore", 10,"./DinosaurImages/Artboard2@4x.png");
         speciesRepository.save(brontosaurus);
 
-        Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore", "./DinosaurImages/Artboard4@4x.png");
+        Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore",6, "./DinosaurImages/Artboard4@4x.png");
         speciesRepository.save(tsintaosaurus);
 
-        Species stegosaurus = new Species("Stegosaurus", "Herbivore", "./DinosaurImages/Artboard5@4x.png");
+        Species stegosaurus = new Species("Stegosaurus", "Herbivore",7, "./DinosaurImages/Artboard5@4x.png");
         speciesRepository.save(stegosaurus);
 
-        Species parasaurolophus = new Species("Parasaurolophus", "Herbivore", "./DinosaurImages/Artboard6@4x.png");
+        Species parasaurolophus = new Species("Parasaurolophus", "Herbivore",5, "./DinosaurImages/Artboard6@4x.png");
         speciesRepository.save(parasaurolophus);
 
-        Species triceratops = new Species("Triceratops", "Herbivore", "./DinosaurImages/Artboard7@4x.png");
+        Species triceratops = new Species("Triceratops", "Herbivore",8, "./DinosaurImages/Artboard7@4x.png");
         speciesRepository.save(triceratops);
 
-        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore", "./DinosaurImages/Artboard8@4x.png");
+        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore",12, "./DinosaurImages/Artboard8@4x.png");
         speciesRepository.save(tyrannosaurus);
 
-        Species talarurus = new Species("Talarurus", "Herbivore", "./DinosaurImages/Artboard10@4x.png");
+        Species talarurus = new Species("Talarurus", "Herbivore",8, "./DinosaurImages/Artboard10@4x.png");
         speciesRepository.save(talarurus);
 
-        Species coelophysis = new Species("Coelophysis", "Carnivore", "./DinosaurImages/Artboard9@4x.png");
+        Species coelophysis = new Species("Coelophysis", "Carnivore",5, "./DinosaurImages/Artboard9@4x.png");
         speciesRepository.save(coelophysis);
 
-        Species diplodocus = new Species("Diplodocus", "Herbivore", "./DinosaurImages/Artboard16@4x.png");
+        Species diplodocus = new Species("Diplodocus", "Herbivore", 10, "./DinosaurImages/Artboard16@4x.png");
         speciesRepository.save(diplodocus);
 
-        Species velociraptor = new Species("Velociraptor", "Carnivore", "./DinosaurImages/Artboard15@4x.png");
+        Species velociraptor = new Species("Velociraptor", "Carnivore", 6, "./DinosaurImages/Artboard15@4x.png");
         speciesRepository.save(velociraptor);
 
-        Dinosaur juan = new Dinosaur(5, "Juan", 'M', diplodocus, eduardoEnclave);
+        Dinosaur juan = new Dinosaur("Juan", 'M', diplodocus, eduardoEnclave);
         dinosaurRepository.save(juan);
 
-        Dinosaur sky = new Dinosaur(6, "Sky", 'M', stegosaurus, nelsonNubbin);
+        Dinosaur sky = new Dinosaur("Sky", 'M', stegosaurus, nelsonNubbin);
         dinosaurRepository.save(sky);
 
-        Dinosaur colin = new Dinosaur(4,"Colin", 'M', triceratops, catrinCanyon);
+        Dinosaur colin = new Dinosaur("Colin", 'M', triceratops, catrinCanyon);
         dinosaurRepository.save(colin);
 
-        Dinosaur sophia = new Dinosaur(7, "Sophia", 'F', velociraptor, morgaineMeadows);
+        Dinosaur sophia = new Dinosaur("Sophia", 'F', velociraptor, morgaineMeadows);
         dinosaurRepository.save(sophia);
 
-        Dinosaur kat = new Dinosaur(10,"Kat", 'F', tyrannosaurus, catrinCanyon);
+        Dinosaur kat = new Dinosaur("Kat", 'F', tyrannosaurus, catrinCanyon);
         dinosaurRepository.save(kat);
 
-        Dinosaur eugene = new Dinosaur(9, "Eugene", 'M', talarurus, eduardoEnclave);
+        Dinosaur eugene = new Dinosaur("Eugene", 'M', talarurus, eduardoEnclave);
         dinosaurRepository.save(eugene);
 
 
