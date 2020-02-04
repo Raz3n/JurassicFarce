@@ -24,8 +24,8 @@ public class Paddock {
     @Column(name="available")
     private boolean available;
 
-    @Column(name="image")
-    private String image;
+    @Column(name="pimage")
+    private String pimage;
 
     @JsonIgnoreProperties("paddock")
     @OneToMany(mappedBy = "paddock", fetch = FetchType.LAZY)
@@ -34,11 +34,11 @@ public class Paddock {
     public Paddock() {
     }
 
-    public Paddock(String name, boolean available, String image){
+    public Paddock(String name, boolean available, String pimage){
         this.capacity = 4;
         this.name = name;
         this.available = false;
-        this.image = "";
+        this.pimage = "";
         this.dinosaurs = new ArrayList<Dinosaur>();
     }
 
@@ -66,12 +66,12 @@ public class Paddock {
         this.available = available;
     }
 
-    public String getImage() {
-        return image;
+    public String getPimage() {
+        return pimage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setPimage(String pimage) {
+        this.pimage = pimage;
     }
 
     public List<Dinosaur> getDinosaurs() {
