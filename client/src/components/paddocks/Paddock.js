@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 
 const Paddock = ({ paddock }) => {
@@ -8,6 +8,7 @@ const Paddock = ({ paddock }) => {
     }
 
     return (
+
         <div className="paddockItem">
             <img src={paddock.pimage} className="paddockImg"/>
             <div className="paddockData">

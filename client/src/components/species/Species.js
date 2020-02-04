@@ -17,7 +17,7 @@ const Species = ({species, handleSelectedSpecies}) => {
             
                 <p>{species.type}</p>
                 <p>{species.diet}</p>
-                <p>{species.image}</p>
+                <img src={species.image} alt={species.type}/>
            
         </div>
     )

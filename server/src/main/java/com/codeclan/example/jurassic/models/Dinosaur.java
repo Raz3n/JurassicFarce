@@ -11,8 +11,6 @@ public class Dinosaur {
     @Column(name = "stomach")
     private int stomach;
 
-    @Column(name = "stomach_capacity")
-    private int stomachCapacity;
 
     @Column(name="name")
     private String name;
@@ -34,8 +32,7 @@ public class Dinosaur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    public Dinosaur(int stomachCapacity, String name, char sex, Species species, Paddock paddock) {
-        this.stomachCapacity = stomachCapacity;
+    public Dinosaur(String name, char sex, Species species, Paddock paddock) {
         this.stomach = 4;
         this.name = name;
         this.sex = sex;
@@ -43,14 +40,6 @@ public class Dinosaur {
         this.paddock = paddock;
     }
     public Dinosaur(){
-    }
-
-    public int getStomachCapacity() {
-        return this.stomachCapacity;
-    }
-
-    public void setStomachCapacity(int stomachCapacity) {
-        this.stomachCapacity = stomachCapacity;
     }
 
     public int getStomach() {

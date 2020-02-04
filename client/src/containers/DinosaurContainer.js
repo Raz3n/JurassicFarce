@@ -40,8 +40,17 @@ class DinosaurContainer extends Component {
         request.patch('/dinosaurs/' + dinoID, {paddock: newPaddock}).then(() => {
             window.location = '/dinosaurs'
         })
-    
     }
+
+    handleFeedDino(dino) {
+        if(dino.stomach < dino.species.stomachCapacity) {
+        const newStomach = dino.stomach + 1
+        const request = new Request();
+        request.patch('/dinosaurs/' + dino.id, {stomach: newStomach}).then(() => {
+            window.location = '/dinosaurs'
+        })}
+    }
+
 
     render() {
         return (
@@ -51,7 +60,8 @@ class DinosaurContainer extends Component {
                         <Route render={(props) => {
                             return <DinosaurList dinosaurs={this.state.dinosaurs} 
                             paddocks={this.state.paddocks} 
-                            handleMoveDinosaur={this.handleMoveDinosaur} /> }} />
+                            handleMoveDinosaur={this.handleMoveDinosaur}
+                            handleFeedDino={this.handleFeedDino} /> }} />
                     </Switch>
                 </Fragment>
             </Router>

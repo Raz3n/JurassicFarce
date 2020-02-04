@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import EditDinosaur from './EditDinosaur';
+import FeedDino from './FeedDino';
 
 
-const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, dinoIndex }) => {
+const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) => {
 
     if (!dinosaur) {
         return "Loading"
@@ -18,13 +19,19 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, dinoIndex }) => {
            
             <div className="paddockSingleDino">
                 <p>PADDOCK:</p>
+<<<<<<< HEAD
                 <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} handleMoveDinosaur={handleMoveDinosaur} />
+=======
+                <EditDinosaur paddocks={paddocks} dinosaur={dinosaur}
+                handleMoveDinosaur={handleMoveDinosaur} />
+>>>>>>> develop
             </div>
           
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
+            <p>{dinosaur.stomach}</p>
             
-            <button></button>
+            <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
 
            </div>
            
