@@ -29,7 +29,7 @@ addVisitors() {
         </div>
        
         <p><span>Visitor Count:</span>{this.state.visitorCount}</p>
-        <p><span>Days since last incident:</span> 62</p>
+        <p><span>Days since last incident:</span> 0</p>
       </div>
     );
   }
