@@ -43,7 +43,7 @@ class DinosaurContainer extends Component {
     }
 
     handleFeedDino(dino) {
-        if(dino.stomach < dino.stomachCapacity) {
+        if(dino.stomach < dino.species.stomachCapacity) {
         const newStomach = dino.stomach + 1
         const request = new Request();
         request.patch('/dinosaurs/' + dino.id, {stomach: newStomach}).then(() => {
