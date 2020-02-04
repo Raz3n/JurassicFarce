@@ -84,7 +84,7 @@ public class DataLoader implements ApplicationRunner {
         Dinosaur sky = new Dinosaur("Sky", 'M', stegosaurus, nelsonNubbin);
         dinosaurRepository.save(sky);
 
-        Dinosaur colin = new Dinosaur("Colin", 'M', triceratops, catrinCanyon);
+        Dinosaur colin = new Dinosaur("Colin", 'M', triceratops, nelsonNubbin);
         dinosaurRepository.save(colin);
 
         Dinosaur sophia = new Dinosaur("Sophia", 'F', velociraptor, morgaineMeadows);
