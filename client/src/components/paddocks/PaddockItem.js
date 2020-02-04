@@ -13,7 +13,7 @@ const dinosaurs = paddock.dinosaurs.map((dinosaur, index) => {
 })
 
 return(
-    <div className='component'>
+    <div className='componentPaddock'>
         <p>{paddock.name}</p>
         <p> Dinosaurs: </p>
         <ul>

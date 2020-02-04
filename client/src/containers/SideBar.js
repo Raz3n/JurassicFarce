@@ -3,7 +3,7 @@ import VisitorTracker from "../components/VisitorTracker";
 
 const SideBar = () => {
   return (
-  <div>
+  <div className="trackerContainer">
       <VisitorTracker />
   </div>
   )

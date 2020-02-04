@@ -10,18 +10,18 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 class Main extends Component {
   render() {
     return (
-        <div>
-      <Router>
-        <Fragment>
-          <NavBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/dinosaurs" component={DinosaurContainer} />
-            <Route path="/paddocks" component={PaddockContainer} />
-          </Switch>
-        </Fragment>
-      </Router>
-      <SideBar />
+        <div className="mainContainer">
+          <Router>
+            <div className="mainBody">
+              <NavBar />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/dinosaurs" component={DinosaurContainer} />
+                <Route path="/paddocks" component={PaddockContainer} />
+              </Switch>
+            </div>
+          </Router>
+        <SideBar />
       </div>
     );
   }
