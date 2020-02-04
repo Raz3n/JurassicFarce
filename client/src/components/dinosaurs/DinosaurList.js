@@ -14,7 +14,7 @@ const DinosaurList = (props) => {
     })
 
     return (
-        <ul className='component-list'>
+        <ul className='component-list innerContainer listDinosaurs'>
             {dinosaurs}
         </ul>
     )

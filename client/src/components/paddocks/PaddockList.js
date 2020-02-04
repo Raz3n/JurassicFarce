@@ -10,14 +10,16 @@ const PaddockList = ({ paddocks }) => {
     const paddocksList = paddocks.map((paddock, index) => {
         return (
             <li key={paddock.id} className='component-item'>
-                <Paddock paddock={paddock} />
+                    <Paddock paddock={paddock} />
             </li>
         )
     })
 
     return (
         <ul className='innerContainer component-list-paddock'>
-            {paddocksList}
+         
+                {paddocksList}
+           
         </ul>
     )
 }
