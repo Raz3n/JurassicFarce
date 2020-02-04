@@ -17,7 +17,7 @@ public class DinosaurTest {
     @Before
     public void before() {
         species = new Species("Diplodocus", "Herbivore", "image1");
-        paddock = new Paddock("Morgaine Meadows");
+        paddock = new Paddock("Morgaine Meadows", true, "./paddocks/paddock_02.svg");
         herbivore = new Dinosaur(5, "Nelson", 'M', species, paddock);
     }
 
