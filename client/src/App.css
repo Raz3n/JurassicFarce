@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,600,700&display=swap');
+
+
+html {
+  background-color: #303539;
+  color: #E3E5FF;
+}
+
+body{ 
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+
+}
+
+h1,h2,h3,h4,h5,h6,p, li, a, p{
+color: #E3E5FF;
+}
+h1 {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+a {
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+
 .App {
   text-align: center;
 }
@@ -21,7 +48,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
 .App-link {
@@ -35,4 +62,87 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  text-size-adjust: auto;
+  margin: 0 20px 0 0;
+  padding: 20px 40px;
+  background: #464A50;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  border-radius: 0 0 20px;
+}
+
+.navbar ul {
+  display: flex;
+  flex: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar ul li {
+
+  list-style: none;
+}  
+.navbar li a {
+  text-decoration: none;
+  
+}
+
+
+.trackerContainer {
+  height: 100vh;
+  background: #454950;
+  width: 400px;
+ 
+  box-sizing: border-box;
+}
+.topTracker {
+  padding: 20px;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 20px 20px;
+  height: 180px;
+}
+.mainContainer {
+  display: flex;
+}
+
+.mainBody {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.innerContainer {
+  padding: 0 20px 0 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100vh - 152px);
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li.component-item {
+  list-style: none;
+}
+
+ul.component-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.component-list-paddock li {
+  margin: 10px;
+  box-shadow: 0 5px 10px #00000061;
+  height: 300px;
+  padding: 4%;
+  box-sizing: border-box;
+  display: flex;
+  width: 30%;
 }

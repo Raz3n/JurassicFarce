@@ -8,9 +8,21 @@ const PaddockItem = ({ paddock }) => {
     }
 
 
+<<<<<<< HEAD
+return(
+    <div className='componentPaddock'>
+        <p>{paddock.name}</p>
+        <p> Dinosaurs: </p>
+        <ul>
+            {dinosaurs}
+        </ul>
+    </div>
+)
+=======
     const dinosaurs = paddock.dinosaurs.map((dinosaur, index) => {
         return <li key={index}><a href={`/dinosaurs/${dinosaur.id}`}></a></li>
     })
+>>>>>>> develop
 
     return (
         <div className='component'>

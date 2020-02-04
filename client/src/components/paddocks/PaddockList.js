@@ -16,7 +16,7 @@ const PaddockList = ({ paddocks }) => {
     })
 
     return (
-        <ul className='component-list'>
+        <ul className='innerContainer component-list-paddock'>
             {paddocksList}
         </ul>
     )
