@@ -1,4 +1,5 @@
 import React from 'react';
+import SVG from 'react-inlinesvg';
 
 
 const Paddock = ({ paddock }) => {
@@ -10,7 +11,7 @@ const Paddock = ({ paddock }) => {
     return (
 
         <div className="paddockItem">
-            <img src={paddock.pimage} className="paddockImg"/>
+            <SVG src={paddock.pimage} className="paddockImg"/>
             <div className="paddockData">
                 <div className="row01Data">
                      <p>{paddock.name}</p>
