@@ -138,15 +138,6 @@ ul.component-list {
   padding-inline-start: 0;
 }
 
-.component-list-paddock li {
-  margin: 10px;
-  box-shadow: 0 5px 10px #00000061;
-  height: 300px;
-  padding: 4%;
-  box-sizing: border-box;
-  display: flex;
-  width: 30%;
-}
 
 li.component-item .dinoItem{
   width: 50%;
@@ -206,4 +197,28 @@ li.component-item .dinoItem{
 }
 ul.component-list.innerContainer.listDinosaurs {
   padding: 40px;
+}
+
+.component-list-paddock li {
+  margin: 10px;
+  box-shadow: 0 5px 10px #00000061;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  width: 47%;
+}
+
+.paddockItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+img.paddockImg {
+  width: 100%;
+}
+
+.row01Data {
+  display: flex;
 }

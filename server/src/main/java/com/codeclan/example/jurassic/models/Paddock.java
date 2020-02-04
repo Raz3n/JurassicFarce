@@ -38,7 +38,7 @@ public class Paddock {
         this.capacity = 4;
         this.name = name;
         this.available = false;
-        this.pimage = "";
+        this.pimage = pimage;
         this.dinosaurs = new ArrayList<Dinosaur>();
     }
 
