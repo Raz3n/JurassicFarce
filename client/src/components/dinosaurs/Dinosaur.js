@@ -24,12 +24,11 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
           
             <p>{dinosaur.species.type}</p>
             <p>{dinosaur.species.diet}</p>
-            <p>{dinosaur.stomach}</p>
-            
-            <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
-
+            <div className="feedingBox">
+                <p>{dinosaur.stomach}</p>
+                <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
+            </div>
            </div>
-           
         </div>
     )
 

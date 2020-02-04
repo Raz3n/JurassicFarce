@@ -10,8 +10,14 @@ class VisitorTracker extends Component {
   render() {
     return (
       <div className="topTracker">
-        <p>Visitor Count:{this.state.visitorCount}</p>
-        <p>Days since last incident: 0</p>
+        <div className="buttonTracker">
+          <h2>PARK</h2>
+          <button className="killAll">
+            <img src="../gun.svg"/> <p>KILL ALL </p></button>
+        </div>
+       
+        <p><span>Visitor Count:</span>{this.state.visitorCount}</p>
+        <p><span>Days since last incident:</span> 62</p>
       </div>
     );
   }

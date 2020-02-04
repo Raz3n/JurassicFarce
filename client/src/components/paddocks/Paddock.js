@@ -18,9 +18,11 @@ const Paddock = ({ paddock }) => {
                   
                 </div>
                 <div className="row02Data">
-                    <p>{paddock.capacity}</p>
-                     <p>{paddock.available}</p>
-                     <button></button>
+                    <p>CAPACITY: 0{paddock.capacity}</p>
+                     <div className="row02DataInner">
+                        <p>ACTIVITY: {paddock.available}</p>
+                        <div className="infoStatus" style={{background: "#4eef4e"}}></div>
+                     </div>
                 </div>
                  
             </div>
