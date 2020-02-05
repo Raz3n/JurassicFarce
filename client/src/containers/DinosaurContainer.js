@@ -34,17 +34,11 @@ class DinosaurContainer extends Component {
     getDinos() {
         const request = new Request;
         return request.get("/dinosaurs");
-        // .then((data) => {
-        //     this.setState({ dinosaurs: data._embedded.dinosaurs})
-        // })
     }
 
     getPaddocks() {
         const request = new Request;
         return request.get("/paddocks");
-        // .then((data) => {
-        //     this.setState({ paddocks: data._embedded.paddocks})
-        // })
     }
 
     handleMoveDinosaur(newPaddock, dinoID) {
@@ -60,7 +54,9 @@ class DinosaurContainer extends Component {
             const newStomach = dino.stomach + 1
             const request = new Request();
             request.patch('/dinosaurs/' + dino.id, { stomach: newStomach }).then(() => {
-                this.getDinos()
+                this.getDinos().then((data) => {
+                    this.setState({dinosaurs: data._embedded.dinosaurs})
+                })
             })
         }
 
@@ -69,13 +65,15 @@ class DinosaurContainer extends Component {
     handleDeleteDino(id) {
         const request = new Request();
         request.delete('/dinosaurs/' + id).then(() => {
-            this.getDinos();
+            this.getDinos().then((data) => {
+                this.setState({dinosaurs: data._embedded.dinosaurs})
+            })
         });
     }
 
     render() {
         if(this.state.loading) {
-            return <h1>Loading...</h1>
+            return <p>Loading...</p>
         }
 
         return (
