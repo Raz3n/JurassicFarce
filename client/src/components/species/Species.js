@@ -15,7 +15,7 @@ const Species = ({ species, handleSelectedSpecies }) => {
 
         <div onClick={handleSelect}>
 
-            <p>{species.type}</p>
+            <p className="species-type-title">{species.type}</p>
             <p>{species.diet}</p>
             <img src={species.image} alt={species.type} />
 
