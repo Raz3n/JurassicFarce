@@ -46,9 +46,14 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino, hand
                 <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
             </div>
            </div>
+           
            <div className='hungerlevelPanelSingleDino'>
-               <div className="percentLevel" style={{ height: dinoHunger()+'%',  backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
-               <div className="percentLevel blurLevel" style={{ height: dinoHunger()+'%',  backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
+               <div className="percentLevel" style={{ height: dinoHunger()+'%',  
+                backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
+
+
+               <div className="percentLevel blurLevel" style={{ height: dinoHunger()+'%',  
+               backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
 
            </div>
         </div>
