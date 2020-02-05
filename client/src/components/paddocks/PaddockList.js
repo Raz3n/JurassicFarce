@@ -7,7 +7,19 @@ const PaddockList = ({ paddocks, handleSelectedPaddock }) => {
         return (<p>Loading...</p>)
     }
 
-    const paddocksList = paddocks.map((paddock) => {
+    function compare(a, b) {
+        let comparison = 0
+        if(a.name > b.name) {
+            comparison = 1;
+        } else if (a.name < b.name) {
+            comparison = -1;
+        }
+        return comparison;
+    }
+
+    const newPaddocks = paddocks.sort(compare);
+
+    const paddocksList = newPaddocks.map((paddock) => {
         return (
             <li key={paddock.id} className='component-item'>
                     <Paddock paddock={paddock} handleSelectedPaddock={handleSelectedPaddock} />

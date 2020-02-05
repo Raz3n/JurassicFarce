@@ -21,7 +21,6 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
                 return (
                     <option key={index}
                         value={paddock._links.self.href}>
-                        {/* selected={dinosaur.paddock.name === paddock.name}> */}
                         {paddock.name}
                     </option>
                 )
