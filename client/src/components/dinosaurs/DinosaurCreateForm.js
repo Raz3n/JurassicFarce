@@ -116,18 +116,22 @@ class DinosaurCreateForm extends Component {
                         onChange={this.handleName}
                         required
                     />
+                    <fieldset>
                     <input
                         type="radio"
                         name="sex"
                         value="F"
                         onChange={this.handleSelectedSex}
-                        checked={true}
+                        required
                     /> Female
-             <input type="radio"
+                    <input
+                        type="radio"
                         name="sex"
                         value="M"
                         onChange={this.handleSelectedSex}
+                        required
                     /> Male
+                    </fieldset>
             <select name="paddocks" onChange={this.handlePaddockChange}>
                         {this.filterPaddocks()}
                     </select>
@@ -136,7 +140,6 @@ class DinosaurCreateForm extends Component {
             </div>
         )
     }
-
 }
 
 export default DinosaurCreateForm;

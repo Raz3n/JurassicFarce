@@ -48,7 +48,7 @@ class DinosaurContainer extends Component {
         const newStomach = dino.stomach + 1
         const request = new Request();
         request.patch('/dinosaurs/' + dino.id, {stomach: newStomach}).then(() => {
-            window.location = '/dinosaurs'
+            // window.location = '/dinosaurs' get state for new stuff to display.
         })}
     }
 
