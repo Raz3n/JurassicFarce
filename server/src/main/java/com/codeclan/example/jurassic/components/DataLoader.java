@@ -48,34 +48,34 @@ public class DataLoader implements ApplicationRunner {
         Paddock johnJungle = new Paddock(5, "John's Jungle", false, true, "./paddock_07.svg");
         paddockRepository.save(johnJungle);
 
-        Species brontosaurus = new Species("Brontosaurus", "Herbivore", 10,"./DinosaurImages/Artboard2@4x.png");
+        Species brontosaurus = new Species("Brontosaurus", "Herbivore", 10,"./DinosaurImages/Artboard_2.svg");
         speciesRepository.save(brontosaurus);
 
-        Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore",6, "./DinosaurImages/Artboard4@4x.png");
+        Species tsintaosaurus = new Species("Tsintaosaurus", "Herbivore",6, "./DinosaurImages/Artboard_4.svg");
         speciesRepository.save(tsintaosaurus);
 
-        Species stegosaurus = new Species("Stegosaurus", "Herbivore",7, "./DinosaurImages/Artboard5@4x.png");
+        Species stegosaurus = new Species("Stegosaurus", "Herbivore",7, "./DinosaurImages/Artboard_5.svg");
         speciesRepository.save(stegosaurus);
 
-        Species parasaurolophus = new Species("Parasaurolophus", "Herbivore",5, "./DinosaurImages/Artboard6@4x.png");
+        Species parasaurolophus = new Species("Parasaurolophus", "Herbivore",5, "./DinosaurImages/Artboard_6.svg");
         speciesRepository.save(parasaurolophus);
 
-        Species triceratops = new Species("Triceratops", "Herbivore",8, "./DinosaurImages/Artboard7@4x.png");
+        Species triceratops = new Species("Triceratops", "Herbivore",8, "./DinosaurImages/Artboard_7.svg");
         speciesRepository.save(triceratops);
 
-        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore",12, "./DinosaurImages/Artboard8@4x.png");
+        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore",12, "./DinosaurImages/Artboard_8.svg");
         speciesRepository.save(tyrannosaurus);
 
-        Species talarurus = new Species("Talarurus", "Herbivore",8, "./DinosaurImages/Artboard10@4x.png");
+        Species talarurus = new Species("Talarurus", "Herbivore",8, "./DinosaurImages/Artboard_10.svg");
         speciesRepository.save(talarurus);
 
-        Species coelophysis = new Species("Coelophysis", "Carnivore",5, "./DinosaurImages/Artboard9@4x.png");
+        Species coelophysis = new Species("Coelophysis", "Carnivore",5, "./DinosaurImages/Artboard_9.svg");
         speciesRepository.save(coelophysis);
 
-        Species diplodocus = new Species("Diplodocus", "Herbivore", 10, "./DinosaurImages/Artboard16@4x.png");
+        Species diplodocus = new Species("Diplodocus", "Herbivore", 10, "./DinosaurImages/Artboard_16.svg");
         speciesRepository.save(diplodocus);
 
-        Species velociraptor = new Species("Velociraptor", "Carnivore", 6, "./DinosaurImages/Artboard15@4x.png");
+        Species velociraptor = new Species("Velociraptor", "Carnivore", 6, "./DinosaurImages/Artboard_15.svg");
         speciesRepository.save(velociraptor);
 
         Dinosaur juan = new Dinosaur("Juan", 'M', diplodocus, eduardoEnclave);
