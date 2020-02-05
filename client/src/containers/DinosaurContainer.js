@@ -18,6 +18,8 @@ class DinosaurContainer extends Component {
         this.handleFeedDino = this.handleFeedDino.bind(this);
         this.getDinos = this.getDinos.bind(this);
         this.getPaddocks = this.getPaddocks.bind(this);
+        this.dinoGetsHungry = this.dinoGetsHungry.bind(this);
+        this.hungerTimer = this.hungerTimer.bind(this);
     }
 
     componentDidMount() {
@@ -29,6 +31,12 @@ class DinosaurContainer extends Component {
                     paddocks: paddockData._embedded.paddocks
                 })
             });
+        this.hungerTimer();
+         
+    }
+
+    hungerTimer() {
+        return setInterval(() => this.dinoGetsHungry(), 8000)
     }
 
     getDinos() {
@@ -69,6 +77,18 @@ class DinosaurContainer extends Component {
                 this.setState({dinosaurs: data._embedded.dinosaurs})
             })
         });
+    }
+
+    dinoGetsHungry() {
+        this.setState(state => ({
+            dinosaurs: {stomach: state.dinosaurs.stomach - 1} 
+          }))
+        const request = new Request();
+        request.patch('/dinosaurs/', this.state.dinosaurs).then(() => {
+            this.getDinos().then((data) => {
+                this.setState({dinosaurs: data._embedded.dinosaurs})
+            })
+        })
     }
 
     render() {
