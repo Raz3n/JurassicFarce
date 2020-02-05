@@ -10,7 +10,6 @@ public interface EmbedPaddocks {
 
     long getId();
     String getName();
-    boolean isAvailable();
     char getSex();
     int getStomach();
     Species getSpecies();
