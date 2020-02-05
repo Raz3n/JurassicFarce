@@ -14,17 +14,14 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino, hand
         return Math.round(num * 100) / 100
     }
 
-<<<<<<< HEAD
     const style01 = {
         backgroundColor: 'hsl('+ dinoHunger() +', 100%, 50%)'
       };
 
 
-=======
     function deleteDino() {
         handleDeleteDino(dinosaur.id)
     }
->>>>>>> develop
 
     return (
         <div className="singleDinosaur">
