@@ -1,5 +1,5 @@
-import React from 'react';
-import SVG from 'react-inlinesvg';
+import React from "react";
+import SVG from "react-inlinesvg";
 
 const Paddock = ({ selectedPaddock, paddock, handleSelectedPaddock }) => {
   if (!paddock) {
@@ -10,19 +10,15 @@ const Paddock = ({ selectedPaddock, paddock, handleSelectedPaddock }) => {
     handleSelectedPaddock(paddock);
   }
 
-     function activeBtn() {
-        
-        if (paddock.available === "true") {
-          return "activeBtn"
-        }
-    
-        else if(paddock.available === "false") {
-          return "nonActiveBtn"
-        }
-      }
+  function activeBtn() {
+    if (paddock.available === "true") {
+      return "activeBtn";
+    } else if (paddock.available === "false") {
+      return "nonActiveBtn";
+    }
+  }
 
   return (
-   
     <div className="paddockItem">
       <div className="paddockImageContainer" onClick={handleSelect}>
         <SVG src={paddock.pimage} className="paddockImg" />
@@ -30,7 +26,6 @@ const Paddock = ({ selectedPaddock, paddock, handleSelectedPaddock }) => {
           <div className="row01Data">
             <p>{paddock.name}</p>
             <p className="smText">PADDOCK 0{paddock.id}</p>
-
           </div>
           <div className="row02Data">
             <p>CAPACITY: 0{paddock.capacity}</p>
@@ -39,12 +34,9 @@ const Paddock = ({ selectedPaddock, paddock, handleSelectedPaddock }) => {
               <div className={activeBtn()}></div>
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
-    
   );
 };
 
