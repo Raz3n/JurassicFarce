@@ -13,6 +13,7 @@ class DinosaurContainer extends Component {
             paddocks: [],
         }
         this.handleMoveDinosaur = this.handleMoveDinosaur.bind(this);
+        this.handleDeleteDino = this.handleDeleteDino.bind(this);
     }
 
     componentDidMount() {
@@ -51,7 +52,13 @@ class DinosaurContainer extends Component {
         })}
     }
 
-
+    handleDeleteDino(id) {
+        const request = new Request();
+        request.delete('/dinosaurs/' + id).then(() => {
+          window.location = '/dinosaurs';
+        });
+      }
+      
     render() {
         return (
             <Router>
@@ -61,7 +68,8 @@ class DinosaurContainer extends Component {
                             return <DinosaurList dinosaurs={this.state.dinosaurs} 
                             paddocks={this.state.paddocks} 
                             handleMoveDinosaur={this.handleMoveDinosaur}
-                            handleFeedDino={this.handleFeedDino} /> }} />
+                            handleFeedDino={this.handleFeedDino} 
+                            handleDeleteDino={this.handleDeleteDino}/> }} />
                     </Switch>
                 </Fragment>
             </Router>

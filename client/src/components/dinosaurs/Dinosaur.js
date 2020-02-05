@@ -3,7 +3,7 @@ import EditDinosaur from './EditDinosaur';
 import FeedDino from './FeedDino';
 
 
-const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) => {
+const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino, handleDeleteDino }) => {
 
     if (!dinosaur) {
         return "Loading"
@@ -14,10 +14,16 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
         return Math.round(num * 100) / 100
     }
 
+    function deleteDino() {
+        handleDeleteDino(dinosaur.id)
+    }
+
     return (
         <div className="singleDinosaur">
             <div className="leftPanelSingleDino">
-            <img src={dinosaur.species.image} alt="Dinosaur species" className="dinoImage"/>
+            <button className="killOne" onClick={deleteDino}>
+            <img src="../gun.svg" alt="gun" /> <p>KILL </p></button>
+            <img src={dinosaur.species.image} alt="dinosaur" className="dinoImage"/>
             </div>
            <div className="rightPanelSingleDino">
             <h4>{dinosaur.name}</h4>
