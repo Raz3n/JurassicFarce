@@ -28,6 +28,7 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
             })
     
     }
+    
     return (
         <select onChange={handleSelect}>
             <option selected disabled value="">Move dinosaur</option>
