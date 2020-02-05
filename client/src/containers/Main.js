@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SideBar from "./SideBar"
+import SideBar from "./SideBar";
 import PaddockContainer from "./PaddockContainer";
 import DinosaurContainer from "./DinosaurContainer";
 import NavBar from "./NavBar";
@@ -21,14 +21,11 @@ class Main extends Component {
               <Route path="/species" component={DinosaurCreateForm} />
             </Switch>
           </div>
-          
         </Router>
         <div className="trackerContainer">
-          <SideBar>
-          </SideBar>
+          <SideBar></SideBar>
         </div>
       </div>
-       
     );
   }
 }

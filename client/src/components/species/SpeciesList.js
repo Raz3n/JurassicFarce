@@ -1,28 +1,23 @@
-import React from 'react';
-import Species from './Species';
+import React from "react";
+import Species from "./Species";
 
-const SpeciesList = ({species, handleSelectedSpecies}) => {
+const SpeciesList = ({ species, handleSelectedSpecies }) => {
+  if (species.length === 0) {
+    return <p>Loading...</p>;
+  }
 
-    if (species.length === 0) {
-        return (<p>Loading...</p>)
-    }
-
-    const speciesList = species.map((specie, index) => {
-        return (
-            <li key={index} className='component-item species-box'>
-                <Species species={specie} handleSelectedSpecies={handleSelectedSpecies} />
-            </li>
-        )
-    })
-
+  const speciesList = species.map((specie, index) => {
     return (
-        <ul className='component-list'>
-            {speciesList}
-        </ul>
+      <li key={index} className="component-item species-box">
+        <Species
+          species={specie}
+          handleSelectedSpecies={handleSelectedSpecies}
+        />
+      </li>
+    );
+  });
 
-
-
-    )
-}
+  return <ul className="component-list">{speciesList}</ul>;
+};
 
 export default SpeciesList;
