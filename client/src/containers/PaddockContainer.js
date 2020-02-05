@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Request from "../helpers/Request";
 import PaddockList from "../components/paddocks/PaddockList";
-import SideBar from "./SideBar";
 import SideBarPaddock from "../components/paddocks/SideBarPaddock";
 
 class PaddockContainer extends Component {

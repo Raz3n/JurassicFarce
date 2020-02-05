@@ -11,7 +11,6 @@ const SideBarPaddock = ({ selectedPaddock, handleAddPaddock}) => {
     return (
         <div className="add-paddock-container">
         <p>{selectedPaddock.name}</p>
-        <p>{selectedPaddock.capacity}</p> 
         <button className="paddockButton" onClick={addPaddock} >Add Paddock</button>
   
         </div>
