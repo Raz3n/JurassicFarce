@@ -287,6 +287,22 @@ button.killAll {
   justify-content: space-around;
   align-content: center;
 }
+
+button.killOne {
+  background: #232323;
+  box-shadow: 0 6px 9px -3px black, 0 -5px 5px -5px #ffffffb8, inset 0 -2px 30px black;
+  border-radius: 25px;
+  height: 40px;
+  width: 90px;
+  border: 1px solid red;
+  color: white;
+  letter-spacing: 0.2em;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
 button.killAll img {
   display: flex;
   align-self: center;
