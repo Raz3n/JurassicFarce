@@ -1,12 +1,20 @@
 import React from 'react';
 import SVG from 'react-inlinesvg';
 
+const Paddock = ({ paddock, handleSelectedPaddock }) => {
+  if (!paddock) {
+    return "Loading";
+  }
 
-const Paddock = ({ paddock }) => {
+  function handleSelect(event) {
+    handleSelectedPaddock(paddock);
+  }
 
-    if (!paddock) {
-        return "Loading"
-    }
+  return (
+    <div className="paddockItem">
+      <div className="paddockImageContainer" onClick={handleSelect}>
+        <img src={paddock.pimage} className="paddockImg" />
+      </div>
 
     return (
 
@@ -29,7 +37,9 @@ const Paddock = ({ paddock }) => {
             </div>
          
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Paddock;
