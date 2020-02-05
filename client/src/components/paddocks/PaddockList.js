@@ -1,16 +1,16 @@
 import React from 'react';
 import Paddock from './Paddock';
 
-const PaddockList = ({ paddocks }) => {
+const PaddockList = ({ paddocks, handleSelectedPaddock }) => {
 
     if (paddocks.length === 0) {
         return (<p>Loading...</p>)
     }
 
-    const paddocksList = paddocks.map((paddock, index) => {
+    const paddocksList = paddocks.map((paddock) => {
         return (
             <li key={paddock.id} className='component-item'>
-                    <Paddock paddock={paddock} />
+                    <Paddock paddock={paddock} handleSelectedPaddock={handleSelectedPaddock} />
             </li>
         )
     })

@@ -4,6 +4,10 @@ import Dinosaur from './Dinosaur';
 
 const DinosaurList = (props) => {
 
+    if(!props.dinosaurs.length) {
+        return <h1>You've killed all the dinosaurs!</h1>
+    }
+
     function compare(a, b) {
         let comparison = 0
         if(a.name > b.name) {
@@ -21,7 +25,8 @@ const DinosaurList = (props) => {
             <li key={index} className='component-item'>
                 <Dinosaur dinoIndex={index} dinosaur={dinosaur} paddocks={props.paddocks} 
                 handleMoveDinosaur={props.handleMoveDinosaur}
-                handleFeedDino={props.handleFeedDino}/>
+                handleFeedDino={props.handleFeedDino}
+                handleDeleteDino={props.handleDeleteDino}/>
             </li>
         )
     })
