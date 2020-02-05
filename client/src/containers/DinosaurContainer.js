@@ -42,10 +42,11 @@ class DinosaurContainer extends Component {
     }
 
     handleMoveDinosaur(newPaddock, dinoID) {
-
         const request = new Request();
         request.patch('/dinosaurs/' + dinoID, { paddock: newPaddock }).then(() => {
-            this.getDinos()
+            this.getDinos().then((data) => {
+                this.setState({dinosaurs: data._embedded.dinosaurs})
+            })
         })
     }
 

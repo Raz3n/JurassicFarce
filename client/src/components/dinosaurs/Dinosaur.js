@@ -34,7 +34,7 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino, hand
             <h4>{dinosaur.name}</h4>
            
             <div className="paddockSingleDino">
-                <p>PADDOCK:</p>
+                <p>PADDOCK:  <span className="dinoName">{dinosaur.paddock.name}</span></p>
                 <EditDinosaur paddocks={paddocks} dinosaur={dinosaur} handleMoveDinosaur={handleMoveDinosaur} />
             </div>
           
