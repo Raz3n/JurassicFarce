@@ -98,16 +98,21 @@ class DinosaurCreateForm extends Component {
     render() {
             
         return (
-            <div>
+            <div >
                 <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
                     species={this.state.species} />
 
-                <img src={this.state.selected_species.image}
-                    alt={this.state.selected_species.type} />
-                <p>{this.state.selected_species.type}</p>
 
-                <form onSubmit={this.handleSubmit}>
-                    <input
+        <div className="form-dino-container">
+                    <div className="dino-form-img">
+                    <img src={this.state.selected_species.image}
+                                        alt={this.state.selected_species.type} />
+                                    <p>{this.state.selected_species.type}</p>
+                    </div>
+              
+
+                <form className="dino-form" onSubmit={this.handleSubmit}>
+                    <input className="dino-input-text"
                         type="text"
                         placeholder="name"
                         name="name"
@@ -115,23 +120,28 @@ class DinosaurCreateForm extends Component {
                         onChange={this.handleName}
                         required
                     />
+                    <div className="sex-form-wrap">
                     <input
                         type="radio"
                         name="sex"
                         value="F"
                         onChange={this.handleSelectedSex}
                         checked={true}
-                    /> Female
+                    /> <span>Female</span>
              <input type="radio"
                         name="sex"
                         value="M"
                         onChange={this.handleSelectedSex}
-                    /> Male
-            <select name="paddocks" onChange={this.handlePaddockChange}>
+                    /> <span>Male</span>
+                </div>
+
+            <select className="select-paddock-menu" name="paddocks" onChange={this.handlePaddockChange}>
                         {this.filterPaddocks()}
                     </select>
-                    <button type="submit">Save new dinosaur </button>
+                    <button className="create-dino" type="submit">Save new dinosaur </button>
                 </form>
+
+                </div>
             </div>
         )
     }

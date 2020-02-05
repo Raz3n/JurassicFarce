@@ -5,6 +5,7 @@ const SideBar = () => {
   return (
   <div className="trackerContainer">
       <VisitorTracker />
+    
   </div>
   )
 };

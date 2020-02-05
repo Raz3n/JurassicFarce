@@ -9,7 +9,7 @@ const SpeciesList = ({ species, handleSelectedSpecies }) => {
 
     const speciesList = species.map((specie, index) => {
         return (
-            <li key={index} className='component-item'>
+            <li key={index} className='component-item species-box'>
                 <Species species={specie} handleSelectedSpecies={handleSelectedSpecies} />
             </li>
         )

@@ -14,6 +14,12 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
         return Math.round(num * 100) / 100
     }
 
+    const style01 = {
+        backgroundColor: 'hsl('+ dinoHunger() +', 100%, 50%)'
+      };
+
+
+
     return (
         <div className="singleDinosaur">
             <div className="leftPanelSingleDino">
@@ -33,9 +39,10 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
                 <p>Hanger Level: {dinoHunger()}%</p>
                 <FeedDino handleFeedDino={handleFeedDino} dinosaur={dinosaur}/>
             </div>
-            
-            
-           
+           </div>
+           <div className='hungerlevelPanelSingleDino'>
+               <div className="percentLevel" style={{ height: dinoHunger()+'%',  backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
+               <div className="percentLevel blurLevel" style={{ height: dinoHunger()+'%',  backgroundColor: "hsl("+ (100 - dinoHunger()) + ", 100%, 50%)" }}></div>
 
            </div>
         </div>
