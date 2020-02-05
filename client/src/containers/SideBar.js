@@ -21,18 +21,12 @@ const SideBar = ({selectedPaddock, handleAddPaddock}) => {
   return (
     <div className="trackerContainer">
       <VisitorTracker />
-<<<<<<< HEAD
-    
-  </div>
-  )
-=======
       <p>{selectedPaddock.name}</p>
       <p>{selectedPaddock.capacity}</p>
       <button className={activatedClass()} onClick={addPaddock} >Add Paddock</button>
 
     </div>
   );
->>>>>>> develop
 };
 
 export default SideBar;
