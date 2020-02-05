@@ -14,6 +14,7 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
         return (
           paddock.herbFriendly === isHerbFriendly &&
           paddock.available === "true" &&
+          dinosaur.paddock.name !== paddock.name &&
           paddock.capacity > paddock.dinosaurs.length
         );
       })
