@@ -1,5 +1,4 @@
 import React from 'react';
-import DinosaurList from './DinosaurList';
 
 const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
 

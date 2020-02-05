@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DinosaurCreateForm from "../components/dinosaurs/DinosaurCreateForm";
-import SideBarPaddock from "../components/paddocks/SideBarPaddock";
 
 class Main extends Component {
   render() {
