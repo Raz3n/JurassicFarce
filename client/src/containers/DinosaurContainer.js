@@ -11,6 +11,7 @@ class DinosaurContainer extends Component {
         this.state = {
             dinosaurs: [],
             paddocks: [],
+            loading: true
         }
         this.handleMoveDinosaur = this.handleMoveDinosaur.bind(this);
         this.handleDeleteDino = this.handleDeleteDino.bind(this);
@@ -20,22 +21,30 @@ class DinosaurContainer extends Component {
     }
 
     componentDidMount() {
-        this.getDinos();
-        this.getPaddocks();
+        Promise.all([this.getDinos(), this.getPaddocks()])
+            .then(([dinoData, paddockData]) => {
+                this.setState({
+                    loading: false,
+                    dinosaurs: dinoData._embedded.dinosaurs,
+                    paddocks: paddockData._embedded.paddocks
+                })
+            });
     }
 
     getDinos() {
         const request = new Request;
-        request.get("/dinosaurs").then((data) => {
-            this.setState({ dinosaurs: data._embedded.dinosaurs})
-        })
+        return request.get("/dinosaurs");
+        // .then((data) => {
+        //     this.setState({ dinosaurs: data._embedded.dinosaurs})
+        // })
     }
 
     getPaddocks() {
         const request = new Request;
-        request.get("/paddocks").then((data) => {
-            this.setState({ paddocks: data._embedded.paddocks})
-        })
+        return request.get("/paddocks");
+        // .then((data) => {
+        //     this.setState({ paddocks: data._embedded.paddocks})
+        // })
     }
 
     handleMoveDinosaur(newPaddock, dinoID) {
@@ -65,6 +74,10 @@ class DinosaurContainer extends Component {
     }
 
     render() {
+        if(this.state.loading) {
+            return <h1>Loading...</h1>
+        }
+
         return (
             <Router>
                 <Fragment>
