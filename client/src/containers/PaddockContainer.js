@@ -9,12 +9,17 @@ class PaddockContainer extends Component {
     this.state = {
       paddocks: [],
       selectedPaddock: {}
-    };
-
+    }
     this.handleSelectedPaddock = this.handleSelectedPaddock.bind(this);
+    this.handleAddPaddock = this.handleAddPaddock.bind(this);
+    this.getPaddocks = this.getPaddocks.bind(this);
   }
 
   componentDidMount() {
+    this.getPaddocks()
+  }
+
+  getPaddocks() {
     const request = new Request();
     request.get("/paddocks").then(data => {
       this.setState({
@@ -27,6 +32,15 @@ class PaddockContainer extends Component {
     this.setState({ selectedPaddock: paddock });
   }
 
+  handleAddPaddock(paddock) {
+    const request = new Request();
+    request.patch("/paddocks/" + paddock.id, {available: "true"}).then(() => {
+      this.getPaddocks()
+    })
+    
+    }
+  
+
   render() {
     return (
       <div className="mainContainer">
@@ -36,24 +50,10 @@ class PaddockContainer extends Component {
             handleSelectedPaddock={this.handleSelectedPaddock}
           />
         </div>
-        <SideBar selectedPaddock={this.state.selectedPaddock} />
+        <SideBar selectedPaddock={this.state.selectedPaddock}
+        handleAddPaddock={this.handleAddPaddock} />
       </div>
 
-      // <Router>
-      //   <Fragment>
-      //     <Switch>
-      //       <Route
-      //         render={props => {
-      //           return (
-
-      //           );
-      //         }}
-      //       />
-      //     </Switch>
-      //   </Fragment>
-      // </Router>
-      //     <SideBar selectedPaddock={this.state.selectedPaddock} />
-      //   </>
     );
   }
 }

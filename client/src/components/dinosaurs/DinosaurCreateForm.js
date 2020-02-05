@@ -86,7 +86,7 @@ class DinosaurCreateForm extends Component {
       )
       .map((paddock, index) => {
         return (
-          <option key={index} value={paddock._links.self.href}>
+          <option key={index} value={paddock._links.self.href} selected={paddock._links.self.href === this.state.selected_paddock}>
             {paddock.name}
           </option>
         );
@@ -132,9 +132,9 @@ class DinosaurCreateForm extends Component {
             required
           />
           Male
-          <select name="paddocks" onChange={this.handlePaddockChange} >
+          <select name="paddocks" required onChange={this.handlePaddockChange} >
+            <option selected disabled value="">Select a paddock</option>
             {this.filterPaddocks()}
-            <option>Select a paddock</option>
           </select>
           <button type="submit">Save new dinosaur </button>
         </form>

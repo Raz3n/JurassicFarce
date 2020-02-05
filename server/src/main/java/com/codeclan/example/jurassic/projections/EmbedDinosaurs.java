@@ -13,7 +13,8 @@ public interface EmbedDinosaurs {
     long getId();
     String getName();
     List<Dinosaur> getDinosaurs();
-    boolean getHerbFriendly();  
+    boolean getHerbFriendly();
+    String getAvailable();
     String getPimage();
     int getCapacity();
 
