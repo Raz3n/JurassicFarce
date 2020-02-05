@@ -82,6 +82,7 @@ class DinosaurCreateForm extends Component {
       .filter(
         paddock =>
           paddock.herbFriendly === isHerbFriendly &&
+          paddock.available === "true" &&
           paddock.capacity > paddock.dinosaurs.length
       )
       .map((paddock, index) => {
