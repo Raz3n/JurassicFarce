@@ -11,19 +11,18 @@ import DinosaurCreateForm from "../components/dinosaurs/DinosaurCreateForm";
 class Main extends Component {
   render() {
     return (
-        <div className="mainContainer">
-          <Router>
-            <div className="mainBody">
-              <NavBar />
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/dinosaurs" component={DinosaurContainer} />
-                <Route path="/paddocks" component={PaddockContainer} />
-                <Route path="/species" component={DinosaurCreateForm}/> 
-              </Switch>
-            </div>
-          </Router>
-        {/* <SideBar /> */}
+      <div className="mainContainer">
+        <Router>
+          <div className="mainBody">
+            <NavBar />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/dinosaurs" component={DinosaurContainer} />
+              <Route path="/paddocks" component={PaddockContainer} />
+              <Route path="/species" component={DinosaurCreateForm} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }

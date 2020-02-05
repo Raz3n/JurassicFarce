@@ -31,31 +31,31 @@ class PaddockContainer extends Component {
 
   render() {
     return (
-        <div className="mainContainer">
-          <div className="mainBody">
+      <div className="mainContainer">
+        <div className="mainBody">
           <PaddockList
-                      paddocks={this.state.paddocks}
-                      handleSelectedPaddock={this.handleSelectedPaddock}
-                    />
+            paddocks={this.state.paddocks}
+            handleSelectedPaddock={this.handleSelectedPaddock}
+          />
         </div>
         <SideBar selectedPaddock={this.state.selectedPaddock} />
       </div>
-      
-        // <Router>
-        //   <Fragment>
-        //     <Switch>
-        //       <Route
-        //         render={props => {
-        //           return (
-                    
-        //           );
-        //         }}
-        //       />
-        //     </Switch>
-        //   </Fragment>
-        // </Router>
-    //     <SideBar selectedPaddock={this.state.selectedPaddock} />
-    //   </>
+
+      // <Router>
+      //   <Fragment>
+      //     <Switch>
+      //       <Route
+      //         render={props => {
+      //           return (
+
+      //           );
+      //         }}
+      //       />
+      //     </Switch>
+      //   </Fragment>
+      // </Router>
+      //     <SideBar selectedPaddock={this.state.selectedPaddock} />
+      //   </>
     );
   }
 }
