@@ -6,9 +6,8 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DinosaurCreateForm from "../components/dinosaurs/DinosaurCreateForm";
-import SideBarDino from "../components/dinosaurs/SideBarDino";
-import SideBarPaddock from "../components/paddocks/SideBarPaddock";
-import SideBarSpecies from "../components/species/SideBarSpecies";
+// import SideBarPaddock from "../components/paddocks/SideBarPaddock";
+// import SideBarSpecies from "../components/species/SideBarSpecies";
 
 class Main extends Component {
   render() {
@@ -28,7 +27,7 @@ class Main extends Component {
         </Router>
         <div className="trackerContainer">
           <SideBar>
-            {/* <SideBarDino/>
+            {/*  
             <SideBarPaddock/>
             <SideBarSpecies/> */}
           </SideBar>
