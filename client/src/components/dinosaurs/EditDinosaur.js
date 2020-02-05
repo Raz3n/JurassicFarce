@@ -13,8 +13,7 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
 
         return paddocks
             .filter(paddock => {
-                return paddock.name !== dinosaur.paddock.name &&
-                    paddock.herbFriendly === isHerbFriendly &&
+                return paddock.herbFriendly === isHerbFriendly &&
                     paddock.capacity > paddock.dinosaurs.length
             })
             .map((paddock, index) => {
@@ -25,6 +24,7 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
                     </option>
                 )
             })
+    
     }
     return (
         <select onChange={handleSelect}>
