@@ -19,6 +19,12 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.1em;
 }
+h2 {
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  line-height: 1.7em;
+}
+
 a {
   text-decoration: none;
   letter-spacing: 0.2em;
@@ -91,7 +97,6 @@ a {
   
 }
 
-
 .trackerContainer {
   height: 100vh;
   background: #454950;
@@ -103,7 +108,17 @@ a {
   padding: 20px;
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 20px 20px;
-  height: 180px;
+  height: 160px;
+}
+.topTracker p span {
+  font-size: 0.9em;
+  margin-right: 10px;
+  color: #a5a5b6;
+  border-bottom: 1px solid grey;
+}
+.buttonTracker {
+  display: flex;
+  justify-content: space-between;
 }
 .mainContainer {
   display: flex;
@@ -113,6 +128,7 @@ a {
   display: flex;
   width: 100%;
   flex-direction: column;
+  background: #232323;
 }
 
 .innerContainer {
@@ -120,11 +136,11 @@ a {
   box-sizing: border-box;
   width: 100%;
   height: calc(100vh - 152px);
-  position: -webkit-sticky;
   position: sticky;
   overflow: scroll;
   display: flex;
   flex-wrap: wrap;
+  padding-inline-start: 20px;
 }
 
 li.component-item {
@@ -181,7 +197,8 @@ li.component-item .dinoItem{
   margin: 0 auto;
   border-radius: 25px;
   max-width: 140px;
-  box-shadow: 0 8px 14px black;
+  box-shadow: 0 8px 14px #e0e0e0;
+  filter: invert(0.9);
 }
 .leftPanelSingleDino {
   display: flex;
@@ -207,6 +224,9 @@ ul.component-list.innerContainer.listDinosaurs {
   box-sizing: border-box;
   display: flex;
   width: 47%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 2px solid transparent;
 }
 
 .paddockItem {
@@ -217,8 +237,81 @@ ul.component-list.innerContainer.listDinosaurs {
 
 img.paddockImg {
   width: 100%;
+  max-height: 180px;
 }
 
 .row01Data {
+  /* display: flex; */
+}
+.row02Data {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ffffff45;
+}
+.row02DataInner {
+  display: flex;
+}
+.infoStatus {
+  width: 40px;
+  height: 20px;
+  background: #a06262;
+  display: block;
+  border-radius: 25px;
+  margin: auto 10px;
+  position: relative;
+  box-shadow: 0 5px 4px #0000009e, 0 -2px 5px #ffffff5c, inset 0 2px 1px #fffcfc94, inset 0 -1px 4px black;
+  border: 1px solid #6161619e;
+}
+.row01Data p {
+  line-height: 0.5;
+  line-height: 0.5em;
+  font-size: 0.785em;
+  color: #abacbd;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+
+button.killAll {
+  background: #232323;
+  box-shadow: 0 6px 9px -3px black, 0 -5px 5px -5px #ffffffb8, inset 0 -2px 30px black;
+  border-radius: 25px;
+  height: 40px;
+  width: 152px;
+  border: 1px solid red;
+  color: white;
+  letter-spacing: 0.2em;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+button.killAll img {
+  display: flex;
+  align-self: center;
+}
+
+.feedButton {
+  cursor: pointer;
+  background: black;
+  color: #7f7e7e;
+  border-radius: 25px;
+  height: 30px;
+  width: 40px;
+  font-size: 1.3em;
+  font-weight: 600;
+  border: 1px solid #464444;
+  box-shadow: 0 4px 6px -1px black, 0 -3px 6px -1px #ffffff8c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedingBox {
+  display: flex;
+}
+.feedingBox p {
+  font-size: 1em;
+  line-height: 1em;
+  margin: 10px 15px 10px 0;
 }

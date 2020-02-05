@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Request from '../../helpers/Request';
-import SpeciesList from '../species/SpeciesList';
+import Request from '../helpers/Request';
+import SpeciesList from '../components/species/SpeciesList';
 
 class DinosaurCreateForm extends Component {
     constructor(props) {
@@ -102,8 +102,9 @@ class DinosaurCreateForm extends Component {
             <div>
                 <SpeciesList handleSelectedSpecies={this.handleSelectedSpecies}
                     species={this.state.species} />
-
-                <img src={this.state.selected_species.image}
+                {/* <div className="formContainer"> */}
+                <img className="selectedDinoImage" 
+                    src={this.state.selected_species.image}
                     alt={this.state.selected_species.type} />
                 <p>{this.state.selected_species.type}</p>
 
@@ -133,7 +134,8 @@ class DinosaurCreateForm extends Component {
                     </select>
                     <button type="submit">Save new dinosaur </button>
                 </form>
-            </div>
+                </div>
+            // </div>
         )
     }
 
