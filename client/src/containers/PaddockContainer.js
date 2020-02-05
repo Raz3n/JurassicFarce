@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Request from "../helpers/Request";
 import PaddockList from "../components/paddocks/PaddockList";
-import Paddock from "../components/paddocks/Paddock";
 import SideBar from "./SideBar";
 
 class PaddockContainer extends Component {

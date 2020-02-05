@@ -1,9 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 import PaddockContainer from "./PaddockContainer";
 import DinosaurContainer from "./DinosaurContainer";
 import NavBar from "./NavBar";
-import SideBar from "./SideBar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DinosaurCreateForm from "../components/dinosaurs/DinosaurCreateForm";

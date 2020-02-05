@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import VisitorTracker from "../components/VisitorTracker";
-import PaddockContainer from "../containers/PaddockContainer";
 
 const SideBar = ({selectedPaddock}) => {
   return (
