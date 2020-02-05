@@ -10,15 +10,12 @@ const Paddock = ({ paddock, handleSelectedPaddock }) => {
     handleSelectedPaddock(paddock);
   }
 
-  return (
-    <div className="paddockItem">
-      <div className="paddockImageContainer" onClick={handleSelect}>
-        <img src={paddock.pimage} className="paddockImg" />
-      </div>
+  
 
     return (
 
         <div className="paddockItem">
+        <div className="paddockImageContainer" onClick={handleSelect}>
             <SVG src={paddock.pimage} className="paddockImg"/>
             <div className="paddockData">
                 <div className="row01Data">
