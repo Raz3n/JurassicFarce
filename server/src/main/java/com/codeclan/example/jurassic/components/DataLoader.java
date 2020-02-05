@@ -63,7 +63,7 @@ public class DataLoader implements ApplicationRunner {
         Species triceratops = new Species("Triceratops", "Herbivore",8, "./DinosaurImages/Artboard7@4x.png");
         speciesRepository.save(triceratops);
 
-        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore",12, "./DinosaurImages/Artboard8@4x.png");
+        Species tyrannosaurus = new Species("Tyrannosaurus", "Carnivore",28, "./DinosaurImages/Artboard8@4x.png");
         speciesRepository.save(tyrannosaurus);
 
         Species talarurus = new Species("Talarurus", "Herbivore",8, "./DinosaurImages/Artboard10@4x.png");
