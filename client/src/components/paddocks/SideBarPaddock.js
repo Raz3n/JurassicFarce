@@ -6,23 +6,13 @@ const SideBarPaddock = ({ selectedPaddock, handleAddPaddock}) => {
         handleAddPaddock(selectedPaddock)
       }
     
-      function activatedClass() {
-        
-        if (selectedPaddock.available) {
-          return "hideAddButton"
-        }
-    
-        else if(!selectedPaddock.available) {
-          return "addPaddockButton"
-        }
-      }
-   
+
   
     return (
-        <div>
+        <div className="add-paddock-container">
         <p>{selectedPaddock.name}</p>
-        <p>{selectedPaddock.capacity}</p>
-        <button className={activatedClass()} onClick={addPaddock} >Add Paddock</button>
+        <p>{selectedPaddock.capacity}</p> 
+        <button className="paddockButton" onClick={addPaddock} >Add Paddock</button>
   
         </div>
 
