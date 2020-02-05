@@ -133,16 +133,10 @@ class DinosaurCreateForm extends Component {
                         name="sex"
                         value="M"
                         onChange={this.handleSelectedSex}
-<<<<<<< HEAD
                     /> <span>Male</span>
                 </div>
 
             <select className="select-paddock-menu" name="paddocks" onChange={this.handlePaddockChange}>
-=======
-                    /> Male
-            <select required name="paddocks" onChange={this.handlePaddockChange}>
-                <option disabled selected>Choose a paddock</option>
->>>>>>> develop
                         {this.filterPaddocks()}
                     </select>
                     <button className="create-dino" type="submit">Save new dinosaur </button>
