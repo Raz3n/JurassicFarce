@@ -86,7 +86,11 @@ class DinosaurCreateForm extends Component {
       )
       .map((paddock, index) => {
         return (
-          <option key={index} value={paddock._links.self.href} selected={paddock._links.self.href === this.state.selected_paddock}>
+          <option
+            key={index}
+            value={paddock._links.self.href}
+            selected={paddock._links.self.href === this.state.selected_paddock}
+          >
             {paddock.name}
           </option>
         );
@@ -101,51 +105,60 @@ class DinosaurCreateForm extends Component {
           species={this.state.species}
         />
 
-     <div className="form-dino-container">
-                 <div className="dino-form-img">
-        <img
-          src={this.state.selected_species.image}
-          alt={this.state.selected_species.type}
-        />
-        <p>{this.state.selected_species.type}</p>
-        </div>
-
-        <form className="dino-form" onSubmit={this.handleSubmit}>
-          <input className="dino-input-text"
-            type="text"
-            placeholder="name"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleName}
-            required
-          />
-          <div className="sex-form-wrap">
-          <input
-            type="radio"
-            name="sex"
-            value="F"
-            onChange={this.handleSelectedSex}
-            required
-          />
-          <span>Female</span>
-          <input
-            type="radio"
-            name="sex"
-            value="M"
-            onChange={this.handleSelectedSex}
-            required
-          />
-          <span>Male</span>
+        <div className="form-dino-container">
+          <div className="dino-form-img">
+            <img
+              src={this.state.selected_species.image}
+              alt={this.state.selected_species.type}
+            />
+            <p>{this.state.selected_species.type}</p>
           </div>
-          <select className="select-paddock-menu" name="paddocks" required onChange={this.handlePaddockChange}>
-            <option selected disabled value="">Select a paddock</option>
-            {this.filterPaddocks()}
-          </select>
-          <button className="create-dino" type="submit">Save new dinosaur </button>
-        </form>
+
+          <form className="dino-form" onSubmit={this.handleSubmit}>
+            <input
+              className="dino-input-text"
+              type="text"
+              placeholder="name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleName}
+              required
+            />
+            <div className="sex-form-wrap">
+              <input
+                type="radio"
+                name="sex"
+                value="F"
+                onChange={this.handleSelectedSex}
+                required
+              />
+              <span>Female</span>
+              <input
+                type="radio"
+                name="sex"
+                value="M"
+                onChange={this.handleSelectedSex}
+                required
+              />
+              <span>Male</span>
+            </div>
+            <select
+              className="select-paddock-menu"
+              name="paddocks"
+              required
+              onChange={this.handlePaddockChange}
+            >
+              <option selected disabled value="">
+                Select a paddock
+              </option>
+              {this.filterPaddocks()}
+            </select>
+            <button className="create-dino" type="submit">
+              Save new dinosaur{" "}
+            </button>
+          </form>
+        </div>
       </div>
-      </div>
-      
     );
   }
 }
