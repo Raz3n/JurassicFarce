@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Request from "../helpers/Request";
 import PaddockList from "../components/paddocks/PaddockList";
 import SideBar from "./SideBar";
+import SideBarPaddock from "../components/paddocks/SideBarPaddock";
 
 class PaddockContainer extends Component {
   constructor(props) {
@@ -50,8 +51,10 @@ class PaddockContainer extends Component {
             handleSelectedPaddock={this.handleSelectedPaddock}
           />
         </div>
-        {/* <SideBar selectedPaddock={this.state.selectedPaddock}
-        handleAddPaddock={this.handleAddPaddock} /> */}
+       <SideBarPaddock
+       paddocks={this.state.paddocks}
+       selectedPaddock={this.state.selectedPaddock}
+       handleAddPaddock={this.handleAddPaddock}/> 
       </div>
 
     );

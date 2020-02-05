@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SideBarPaddock = ({selectedPaddock, handleAddPaddock}) => {
+const SideBarPaddock = ({ selectedPaddock, handleAddPaddock}) => {
 
     function addPaddock(e) {
         handleAddPaddock(selectedPaddock)
