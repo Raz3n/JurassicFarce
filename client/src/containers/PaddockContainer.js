@@ -12,9 +12,14 @@ class PaddockContainer extends Component {
     }
     this.handleSelectedPaddock = this.handleSelectedPaddock.bind(this);
     this.handleAddPaddock = this.handleAddPaddock.bind(this);
+    this.getPaddocks = this.getPaddocks.bind(this);
   }
 
   componentDidMount() {
+    this.getPaddocks()
+  }
+
+  getPaddocks() {
     const request = new Request();
     request.get("/paddocks").then(data => {
       this.setState({
@@ -29,8 +34,8 @@ class PaddockContainer extends Component {
 
   handleAddPaddock(paddock) {
     const request = new Request();
-    request.patch("/paddocks/" + paddock.id, {avaiable: "true"}).then(() => {
-      window.location = "/paddocks"
+    request.patch("/paddocks/" + paddock.id, {available: "true"}).then(() => {
+      this.getPaddocks()
     })
     
     }

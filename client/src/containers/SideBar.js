@@ -3,7 +3,7 @@ import VisitorTracker from "../components/VisitorTracker";
 
 const SideBar = ({selectedPaddock, handleAddPaddock}) => {
 
-  function addPaddock() {
+  function addPaddock(e) {
     handleAddPaddock(selectedPaddock)
   }
 
@@ -23,7 +23,6 @@ const SideBar = ({selectedPaddock, handleAddPaddock}) => {
       <VisitorTracker />
       <p>{selectedPaddock.name}</p>
       <p>{selectedPaddock.capacity}</p>
-      <p>{selectedPaddock.available}</p>
       <button className={activatedClass()} onClick={addPaddock} >Add Paddock</button>
 
     </div>
