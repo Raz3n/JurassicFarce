@@ -50,8 +50,8 @@ class PaddockContainer extends Component {
             handleSelectedPaddock={this.handleSelectedPaddock}
           />
         </div>
-        <SideBar selectedPaddock={this.state.selectedPaddock}
-        handleAddPaddock={this.handleAddPaddock} />
+        {/* <SideBar selectedPaddock={this.state.selectedPaddock}
+        handleAddPaddock={this.handleAddPaddock} /> */}
       </div>
 
     );
