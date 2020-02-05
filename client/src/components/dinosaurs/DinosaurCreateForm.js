@@ -101,14 +101,17 @@ class DinosaurCreateForm extends Component {
           species={this.state.species}
         />
 
+     <div className="form-dino-container">
+                 <div className="dino-form-img">
         <img
           src={this.state.selected_species.image}
           alt={this.state.selected_species.type}
         />
         <p>{this.state.selected_species.type}</p>
+        </div>
 
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <form className="dino-form" onSubmit={this.handleSubmit}>
+          <input className="dino-input-text"
             type="text"
             placeholder="name"
             name="name"
@@ -116,6 +119,7 @@ class DinosaurCreateForm extends Component {
             onChange={this.handleName}
             required
           />
+          <div className="sex-form-wrap">
           <input
             type="radio"
             name="sex"
@@ -123,7 +127,7 @@ class DinosaurCreateForm extends Component {
             onChange={this.handleSelectedSex}
             required
           />
-          Female
+          <span>Female</span>
           <input
             type="radio"
             name="sex"
@@ -131,14 +135,17 @@ class DinosaurCreateForm extends Component {
             onChange={this.handleSelectedSex}
             required
           />
-          Male
-          <select name="paddocks" required onChange={this.handlePaddockChange} >
+          <span>Male</span>
+          </div>
+          <select className="select-paddock-menu" name="paddocks" required onChange={this.handlePaddockChange}>
             <option selected disabled value="">Select a paddock</option>
             {this.filterPaddocks()}
           </select>
-          <button type="submit">Save new dinosaur </button>
+          <button className="create-dino" type="submit">Save new dinosaur </button>
         </form>
       </div>
+      </div>
+      
     );
   }
 }

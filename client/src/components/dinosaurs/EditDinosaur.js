@@ -1,4 +1,5 @@
 import React from 'react';
+import DinosaurList from './DinosaurList';
 
 const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
 
@@ -19,7 +20,8 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
             .map((paddock, index) => {
                 return (
                     <option key={index}
-                        value={paddock._links.self.href}>
+                        value={paddock._links.self.href}
+                        selected={dinosaur.paddock.name === paddock.name}>
                         {paddock.name}
                     </option>
                 )
@@ -28,9 +30,6 @@ const EditDinosaur = ({ paddocks, dinosaur, handleMoveDinosaur }) => {
     }
     return (
         <select onChange={handleSelect}>
-            <option defaultValue={dinosaur.paddock}>
-                {dinosaur.paddock.name}
-            </option>
             {filterPaddocks()}
         </select>
     )

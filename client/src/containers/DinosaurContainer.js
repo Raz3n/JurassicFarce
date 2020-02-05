@@ -42,7 +42,7 @@ class DinosaurContainer extends Component {
 
         const request = new Request();
         request.patch('/dinosaurs/' + dinoID, { paddock: newPaddock }).then(() => {
-            window.location = '/dinosaurs'
+            this.getDinos()
         })
     }
 
