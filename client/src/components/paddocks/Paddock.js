@@ -38,7 +38,6 @@ const Paddock = ({ paddock, handleSelectedPaddock }) => {
          
         </div>
       </div>
-    </div>
   );
 };
 
