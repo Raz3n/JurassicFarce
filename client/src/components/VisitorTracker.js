@@ -45,7 +45,7 @@ class VisitorTracker extends Component {
         <div className="buttonTracker">
           <h2>PARK</h2>
           <button className="killAll" onClick={this.nukePark}>
-            <img src="../gun.svg" /> <p>KILL ALL </p></button>
+            <img src="../gun.svg" alt="Gun" /> <p>KILL ALL </p></button>
         </div>
 
         <p><span>Visitor Count:</span>{this.state.visitorCount}</p>

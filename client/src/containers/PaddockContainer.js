@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Request from "../helpers/Request";
 import PaddockList from "../components/paddocks/PaddockList";
 import SideBar from "./SideBar";

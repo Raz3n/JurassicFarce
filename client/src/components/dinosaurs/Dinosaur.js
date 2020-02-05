@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import EditDinosaur from './EditDinosaur';
 import FeedDino from './FeedDino';
 
@@ -17,7 +17,7 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino }) =>
     return (
         <div className="singleDinosaur">
             <div className="leftPanelSingleDino">
-            <img src={dinosaur.species.image} className="dinoImage"/>
+            <img src={dinosaur.species.image} alt="Dinosaur species" className="dinoImage"/>
             </div>
            <div className="rightPanelSingleDino">
             <h4>{dinosaur.name}</h4>
