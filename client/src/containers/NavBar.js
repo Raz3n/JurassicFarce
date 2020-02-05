@@ -12,7 +12,7 @@ const NavBar = () => (
         <Link to="/paddocks">Paddocks</Link>
       </li>
       <li>
-        <Link to="/species">species</Link>
+        <Link to="/species">Create Dinosaur</Link>
       </li>
     </ul>
     {/* <button>Kill All</button> */}
