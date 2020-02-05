@@ -25,9 +25,10 @@ const Dinosaur = ({ dinosaur, paddocks, handleMoveDinosaur, handleFeedDino, hand
 
     return (
         <div className="singleDinosaur">
-            <div className="leftPanelSingleDino">
             <button className="killOne" onClick={deleteDino}>
             <img src="../gun.svg" /> <p>KILL </p></button>
+            <div className="leftPanelSingleDino">
+            
             <img src={dinosaur.species.image} className="dinoImage"/>
             </div>
            <div className="rightPanelSingleDino">

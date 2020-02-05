@@ -28,9 +28,9 @@ class Main extends Component {
         </Router>
         <div className="trackerContainer">
           <SideBar>
-            <SideBarDino/>
+            {/* <SideBarDino/>
             <SideBarPaddock/>
-            <SideBarSpecies/>
+            <SideBarSpecies/> */}
           </SideBar>
         </div>
       </div>
