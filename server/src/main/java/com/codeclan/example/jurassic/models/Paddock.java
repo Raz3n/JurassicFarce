@@ -22,7 +22,7 @@ public class Paddock {
     private String name;
 
     @Column(name="available")
-    private Boolean available;
+    private String available;
 
     @Column(name="herbivore_friendly")
     private Boolean herb_friendly; 
@@ -37,7 +37,7 @@ public class Paddock {
     public Paddock() {
     }
 
-    public Paddock(int capacity, String name, Boolean available, Boolean herb_friendly, String pimage){
+    public Paddock(int capacity, String name, String available, Boolean herb_friendly, String pimage){
         this.capacity = capacity;
         this.name = name;
         this.available = available;
@@ -62,11 +62,11 @@ public class Paddock {
         this.name = name;
     }
 
-    public Boolean isAvailable() {
+    public String getAvailable() {
         return available;
     }
 
-    public void setAvailable(Boolean available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 
