@@ -1,7 +1,7 @@
 # JurassicFarce
 Jurassic Farce is a management app for the manager of Jurassic Park. The app was made over six days with a team of four people using React in the frontend, and using Spring for data persistance.
 
-![Screenshot of dinosaur page](client/public/dinoPage.png
+![Screenshot of dinosaur page](client/public/dinoPage.png)
 ![Screenshot of dinosaur create page](client/public/dinoCreatePage.png)
 
 # Project Brief
@@ -23,3 +23,17 @@ The user must be able to add paddocks, add / remove dinosaurs to paddocks, feed 
 * Visitors can enter / exit the park if the dinosaurs are not rampaging.
 * View the number of visitors in the park at a given time.
 * Anything else you can dream up!
+
+# Conclusions
+
+# Project Set Up
+
+### Backend Set Up
+Run JurassicApplication.java
+
+### Frontend Set Up
+```
+npm install
+npm start
+```
+
