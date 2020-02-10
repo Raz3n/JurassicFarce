@@ -13,7 +13,7 @@ You have been asked to create a web app to allow the management in Jurassic Park
 
 ### MVP
 
-The user must be able to add paddocks, add / remove dinosaurs to paddocks, feed dinosaurs. You should also be able to transfer Herbivores between paddocks. :/
+The user must be able to add paddocks, add / remove dinosaurs to paddocks, feed dinosaurs. You should also be able to transfer Herbivores between paddocks.
 
 
 ### Project Extensions
@@ -25,6 +25,10 @@ The user must be able to add paddocks, add / remove dinosaurs to paddocks, feed 
 * Anything else you can dream up!
 
 # Conclusions
+
+### Things To Improve
+
+* Better focus on the MVP, with less time spent planning for the extensions early on.
 
 # Project Set Up
 
