@@ -33,6 +33,10 @@ The user must be able to add paddocks, add / remove dinosaurs to paddocks, feed 
 # Project Set Up
 
 ### Backend Set Up
+```
+createdb jurassicfarce
+```
+
 Run JurassicApplication.java
 
 ### Frontend Set Up
