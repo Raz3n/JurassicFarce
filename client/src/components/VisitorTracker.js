@@ -3,7 +3,6 @@ import Request from "../helpers/Request";
 
 class VisitorTracker extends Component {
   constructor() {
-    super();
     this.state = {
       visitorCount: 300,
       dinosaurs: []
